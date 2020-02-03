@@ -10,6 +10,10 @@ import Foundation
 import CoreData
 import UIKit
 
+
+
+// Need a plant object here to convert images to data ...... imageName computed property to grab image name from the store.
+=======
 struct PlantRepresentation: Equatable, Codable {
     var nickname: String
     var imageName: String
@@ -32,4 +36,4 @@ struct PlantRepresentation: Equatable, Codable {
 
 struct PlantRepresentations: Codable {
     let results: [PlantRepresentation]
-}
+} master
