@@ -8,5 +8,26 @@
 
 import Foundation
 import CoreData
+import UIKit
 
-// Need a plant object here to convert images to data ...... imageName computed property to grab image name from the store.
+struct PlantRepresentation: Equatable, Codable {
+    var nickname: String
+    var imageName: String
+    var plantImage: UIImage {
+         UIImage(named: imageName)!
+    }
+    var h2oFrequency: Int
+    var h2oDate: Date {
+        let dateformatter = DateFormatter()
+        dateformatter.
+        let newDate = Date().timeIntervalSinceNow
+        let dividend = h2oFrequency
+        let intDate = Int(newDate)
+        intDate / h2oFrequency
+    }
+    var species: String
+}
+
+struct PlantRepresentations: Codable {
+    let results: [PlantRepresentation]
+}
