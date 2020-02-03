@@ -10,8 +10,9 @@ import UIKit
 
 class PlantsDetailViewController: UIViewController {
 
+    @IBOutlet weak var plantImageView: UIImageView!
     
-    
+    @IBOutlet weak var nameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -198,6 +198,10 @@
                         <viewLayoutGuide key="safeArea" id="LWa-3d-wTB"/>
                     </view>
                     <navigationItem key="navigationItem" id="lCV-4h-Gzw"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="CC0-xX-AJx" id="cgP-YU-Yvh"/>
+                        <outlet property="plantImageView" destination="y1H-WQ-No7" id="WeX-H1-F5T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FD0-go-UOa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
