@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="ux2-6s-rxY">
             <objects>
-                <viewController id="6kr-MK-IiY" sceneMemberID="viewController">
+                <viewController id="6kr-MK-IiY" customClass="SignUpViewController" customModule="WaterMyPlants" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Sp-Pm-BJr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
                                 <rect key="frame" x="175" y="466" width="64" height="30"/>
                                 <state key="normal" title="Signup"/>
                                 <connections>
-                                    <segue destination="I5B-3x-p8H" kind="show" id="RbJ-ep-kEz"/>
+                                    <segue destination="I5B-3x-p8H" kind="show" identifier="SigntoTableView" id="RbJ-ep-kEz"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PassWord" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n10-6b-USD">
@@ -66,7 +66,7 @@
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Signup"/>
                                 <connections>
-                                    <segue destination="6kr-MK-IiY" kind="show" id="Qc5-LS-ztX"/>
+                                    <segue destination="6kr-MK-IiY" kind="show" identifier="SignupSegue" id="Qc5-LS-ztX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPj-Df-mkM">
@@ -74,7 +74,7 @@
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="sor-dW-qlE" kind="show" id="ySE-Rz-fOJ"/>
+                                    <segue destination="sor-dW-qlE" kind="show" identifier="LoginSegue" id="ySE-Rz-fOJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -95,16 +95,16 @@
             </objects>
             <point key="canvasLocation" x="655.07246376811599" y="-75"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Plants Table View Controller-->
         <scene sceneID="s0M-ec-zWd">
             <objects>
-                <tableViewController id="I5B-3x-p8H" sceneMemberID="viewController">
+                <tableViewController id="I5B-3x-p8H" customClass="PlantsTableViewController" customModule="WaterMyPlants" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4IF-h8-PKr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="94" id="cYj-Ol-sqO">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="94" id="cYj-Ol-sqO" customClass="PlantsTableViewCell" customModule="WaterMyPlants" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cYj-Ol-sqO" id="Fr3-fY-nnY">
@@ -112,7 +112,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="eke-rL-5kc" kind="show" id="zK7-8w-A3I"/>
+                                    <segue destination="eke-rL-5kc" kind="show" identifier="PlantDetialSegue" id="zK7-8w-A3I"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -124,7 +124,7 @@
                     <navigationItem key="navigationItem" id="AA7-Ou-jZa">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="rhU-aa-hG7">
                             <connections>
-                                <segue destination="fFe-VF-dfo" kind="show" id="Pwm-Pc-36G"/>
+                                <segue destination="fFe-VF-dfo" kind="show" identifier="AddPlantSegue" id="Pwm-Pc-36G"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -133,10 +133,10 @@
             </objects>
             <point key="canvasLocation" x="1600.0000000000002" y="-45.535714285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Plants Detail View Controller-->
         <scene sceneID="Q4Z-lW-qC7">
             <objects>
-                <viewController id="eke-rL-5kc" sceneMemberID="viewController">
+                <viewController id="eke-rL-5kc" customClass="PlantsDetailViewController" customModule="WaterMyPlants" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aYg-Hg-tmc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -203,10 +203,10 @@
             </objects>
             <point key="canvasLocation" x="2453.6231884057975" y="273.88392857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Plant View Controller-->
         <scene sceneID="dQE-UF-vcx">
             <objects>
-                <viewController id="fFe-VF-dfo" sceneMemberID="viewController">
+                <viewController id="fFe-VF-dfo" customClass="AddPlantViewController" customModule="WaterMyPlants" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QMr-jm-9Rj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -258,7 +258,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="frB-3b-gbY">
-                                        <rect key="frame" x="0.0" y="20" width="320" height="216"/>
+                                        <rect key="frame" x="0.0" y="20.5" width="320" height="216"/>
                                     </datePicker>
                                 </subviews>
                             </stackView>
@@ -275,16 +275,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZZl-lQ-Q3R"/>
                     </view>
-                    <navigationItem key="navigationItem" id="j3f-ee-lPa"/>
+                    <navigationItem key="navigationItem" id="j3f-ee-lPa">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="FPa-Gp-6CG"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1H-v7-ynU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2452" y="-506"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="HV2-2k-jLg">
             <objects>
-                <viewController id="sor-dW-qlE" sceneMemberID="viewController">
+                <viewController id="sor-dW-qlE" customClass="LoginViewController" customModule="WaterMyPlants" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NQZ-lc-F4A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -301,9 +303,9 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTL-Bw-KGU">
                                 <rect key="frame" x="175" y="466" width="64" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="I5B-3x-p8H" kind="show" id="Eif-E5-xH8"/>
+                                    <segue destination="I5B-3x-p8H" kind="show" identifier="loginTableView" id="Eif-E5-xH8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -350,6 +352,6 @@
         <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Eif-E5-xH8"/>
+        <segue reference="RbJ-ep-kEz"/>
     </inferredMetricsTieBreakers>
 </document>
