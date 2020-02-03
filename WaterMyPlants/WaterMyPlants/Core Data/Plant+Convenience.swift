@@ -18,24 +18,29 @@ let context = persistentStoreController.mainContext
     
    
     
-    @discardableResult convenience init(h2oFrequency: Int64, imageName: String? = nil, nickname: String? = nil, identifier: UUID = UUID(), context: PersistentContext = context) {
+    @discardableResult convenience init?(h2oFrequency: Int, imageName: String, nickname: String, identifier: UUID = UUID(), context: PersistentContext) {
         
-        self.h2oFrequency = h2oFrequency
+        guard let context = context as? NSManagedObjectContext else { return nil }
+        
+        self.init(context: context)
+        
+        self.h2oFrequency = Int64(h2oFrequency)
         self.imageName = imageName
         self.nickname = nickname
         self.identifier = identifier
         
         
+        
     }
     
-    @discardableResult convenience init?(plantRepresentation: PlantRepresentation, context: PersistentContext = context) {
+    @discardableResult convenience init?(plantRepresentation: PlantRepresentation, context: PersistentContext) {
         guard let identifierString = plantRepresentation.identifier,
             let identifier = UUID(uuidString: identifierString),
         let h2oFrequency = plantRepresentation.h2oFrequency,
         let imageName = plantRepresentation.imageName,
         let nickname = plantRepresentation.nickname else {return nil}
         
-        self.init(h2oFrequency: plantRepresentation.h2oFrequency, imageName: plantRepresentation.imageName, nickname: plantRepresentation.nickname, identifier: identifier, context: context)
+        self.init(h2oFrequency: Int(h2oFrequency), imageName: imageName, nickname: nickname, identifier: identifier, context: context)
     }
     
     var plantRepresentation: PlantRepresentation {
