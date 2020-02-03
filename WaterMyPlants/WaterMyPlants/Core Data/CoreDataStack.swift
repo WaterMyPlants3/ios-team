@@ -20,8 +20,6 @@ class CoreDataStack: NSObject, PersistentStoreController {
     
     weak var delegate: PersistentStoreControllerDelegate?
     
-    static let shared = CoreDataStack() 
-
     lazy var container = setUpContainer()
     lazy var fetchedResultsController = setUpResultsController()
 
