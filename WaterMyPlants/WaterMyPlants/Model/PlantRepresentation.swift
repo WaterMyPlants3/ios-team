@@ -10,6 +10,7 @@ import Foundation
 import CoreData
 import UIKit
 
+
 struct PlantRepresentation: Equatable, Codable {
     var nickname: String
     var imageName: String
