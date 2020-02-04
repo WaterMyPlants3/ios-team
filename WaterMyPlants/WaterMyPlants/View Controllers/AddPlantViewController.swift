@@ -10,21 +10,38 @@ import UIKit
 
 class AddPlantViewController: UIViewController {
     
-    // Mark- Outlets
+    //Outlets
     @IBOutlet weak var plantNameTextField: UITextField!
     @IBOutlet weak var waterPerDayTextField: UITextField!
     @IBOutlet weak var SpeciesTextField: UITextField!
     @IBOutlet weak var plantImageView: UIImageView!
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    var plantArray = [PlantRepresentation]()
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
-
     
-
+    @IBAction func SaveButtonTapped(_ sender: UIBarButtonItem) {
+        
+        guard let plantName = plantNameTextField.text,
+            let waterPerDay = waterPerDayTextField.text,
+            let species = SpeciesTextField.text,
+            let plantImage = plantImageView.image,
+            let date = datePicker.self else { return }
+        
+        if !plantName.isEmpty, !waterPerDay.isEmpty, !species.isEmpty {
+            plantArray.append(<#T##newElement: PlantRepresentation##PlantRepresentation#>)
+        }
+            
+        
+    }
+    
+    
+    
+    
+    
 }
