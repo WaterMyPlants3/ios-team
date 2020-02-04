@@ -13,7 +13,6 @@ class LoginViewController: UIViewController {
     
     var userController: UserController!
     
-    @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var userNameTextField:UITextField!
     @IBOutlet weak var passWordTextField: UITextField!
     
@@ -23,8 +22,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
-        if let username = userNameTextField.text, let password = passWordTextField.text, let phoneNumber = phoneNumberTextField.text {
-            userController.signIn(with: User(username: username, password: password, phoneNumber: phoneNumber)) { (error) in
+        if let username = userNameTextField.text, let password = passWordTextField.text {
+            userController.signIn(with: User(username: username, password: password)) { (error) in
                 if let error = error {
                     print("Error loggingin: \(error.localizedDescription)")
                 } else {

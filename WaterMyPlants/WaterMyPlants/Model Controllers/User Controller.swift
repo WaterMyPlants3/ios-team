@@ -17,8 +17,7 @@ class UserController {
     var user: User?
     
     func signUp(with user: User, completion: @escaping (Error?) -> ()) {
-        
-        let signUpUrl = baseURL.appendingPathComponent("users/signup")
+        let signUpUrl = baseURL.appendingPathComponent("api/auth/register")
         
         var request = URLRequest(url: signUpUrl)
         request.httpMethod = HTTPMethod.post.rawValue
@@ -40,7 +39,7 @@ class UserController {
                 return
             }
             
-            if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+            if let response = response as? HTTPURLResponse, response.statusCode != 200 || response.statusCode != 201 {
                 completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
                 return
             }
@@ -52,7 +51,7 @@ class UserController {
     
     func signIn(with user: User, completion: @escaping (Error?) -> ()) {
         
-        let signInUrl = baseURL.appendingPathComponent("users/login")
+        let signInUrl = baseURL.appendingPathComponent("api/auth/login")
         
         var request = URLRequest(url: signInUrl)
         request.httpMethod = HTTPMethod.post.rawValue

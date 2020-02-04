@@ -336,33 +336,22 @@
                                     <segue destination="I5B-3x-p8H" kind="show" identifier="loginTableView" id="Eif-E5-xH8"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PhoneNumber" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0k-WO-8Gk">
-                                <rect key="frame" x="65" y="316" width="284" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6wS-AP-mcY" firstAttribute="leading" secondItem="SkG-Ih-gWP" secondAttribute="leading" constant="65" id="6Me-NR-JrN"/>
-                            <constraint firstItem="m0k-WO-8Gk" firstAttribute="leading" secondItem="SkG-Ih-gWP" secondAttribute="leading" constant="65" id="72R-9a-W9k"/>
-                            <constraint firstItem="SkG-Ih-gWP" firstAttribute="trailing" secondItem="m0k-WO-8Gk" secondAttribute="trailing" constant="65" id="7fD-93-SHc"/>
-                            <constraint firstItem="m0k-WO-8Gk" firstAttribute="top" secondItem="SkG-Ih-gWP" secondAttribute="top" constant="228" id="Lu4-eD-NYQ"/>
+                            <constraint firstItem="6wS-AP-mcY" firstAttribute="top" secondItem="SkG-Ih-gWP" secondAttribute="top" constant="270" id="M76-by-tpQ"/>
                             <constraint firstItem="SkG-Ih-gWP" firstAttribute="trailing" secondItem="8MX-IB-MgI" secondAttribute="trailing" constant="65" id="OO0-vl-7Ab"/>
                             <constraint firstItem="sTL-Bw-KGU" firstAttribute="leading" secondItem="SkG-Ih-gWP" secondAttribute="leading" constant="175" id="QC2-qX-txB"/>
                             <constraint firstItem="8MX-IB-MgI" firstAttribute="leading" secondItem="SkG-Ih-gWP" secondAttribute="leading" constant="65" id="XhR-TS-ANu"/>
                             <constraint firstItem="SkG-Ih-gWP" firstAttribute="trailing" secondItem="6wS-AP-mcY" secondAttribute="trailing" constant="65" id="Yko-GK-b7G"/>
                             <constraint firstItem="sTL-Bw-KGU" firstAttribute="top" secondItem="8MX-IB-MgI" secondAttribute="bottom" constant="32" id="h0h-1d-T6u"/>
-                            <constraint firstItem="6wS-AP-mcY" firstAttribute="top" secondItem="m0k-WO-8Gk" secondAttribute="bottom" constant="8" id="iJS-lV-QI9"/>
                             <constraint firstItem="8MX-IB-MgI" firstAttribute="top" secondItem="6wS-AP-mcY" secondAttribute="bottom" constant="8" id="ty0-ab-1eb"/>
                             <constraint firstItem="SkG-Ih-gWP" firstAttribute="trailing" secondItem="sTL-Bw-KGU" secondAttribute="trailing" constant="175" id="xDZ-v7-7nx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SkG-Ih-gWP"/>
                     </view>
                     <navigationItem key="navigationItem" id="cZc-oG-Qp2"/>
-                    <connections>
-                        <outlet property="phoneNumberTextField" destination="m0k-WO-8Gk" id="Ikf-Mf-Ecr"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D9m-o7-BXN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
