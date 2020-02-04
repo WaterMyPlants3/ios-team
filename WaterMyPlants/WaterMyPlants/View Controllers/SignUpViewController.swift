@@ -7,24 +7,39 @@
 //
 
 import UIKit
+import CoreData
 
 class SignUpViewController: UIViewController {
+    
+    var userController = UserController()
+    
+    //var baseURL = URL(string: "https://water-my-plant-9000.herokuapp.com/")
+    
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func SignUpButtonTapped(_ sender: UIButton) {
+         if let username = userNameTextField.text,
+            let password = passwordTextField.text,
+            let phoneNumber = phoneNumberTextField.text {
+            userController.signUp(with: User(username: username,
+                                             password: password,
+                                             phoneNumber: phoneNumber)) { (error) in 
+                if let error = error {
+                    print("Error sign up: \(error.localizedDescription)")
+                } else {
+                    self.performSegue(withIdentifier: Keys.signToTableView, sender: self)
+                }
+            }
+        }
     }
-    */
+    
+   
 
 }

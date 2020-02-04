@@ -24,6 +24,7 @@
                                 <rect key="frame" x="175" y="466" width="64" height="30"/>
                                 <state key="normal" title="Signup"/>
                                 <connections>
+                                    <action selector="SignUpButtonTapped:" destination="6kr-MK-IiY" eventType="touchUpInside" id="jPw-Mg-FOk"/>
                                     <action selector="signUpButtonTapped:" destination="Ez5-wh-7Dd" eventType="touchUpInside" id="AjJ-Tm-cCx"/>
                                     <segue destination="I5B-3x-p8H" kind="show" identifier="SigntoTableView" id="RbJ-ep-kEz"/>
                                 </connections>
@@ -31,29 +32,42 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PassWord" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n10-6b-USD">
                                 <rect key="frame" x="65" y="400" width="284" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PhoneNumber" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TJe-cH-YGg">
+                                <rect key="frame" x="65" y="316" width="284" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="xtL-iT-HEF" firstAttribute="trailing" secondItem="hfU-7B-1uE" secondAttribute="trailing" constant="65" id="0AB-MY-cji"/>
+                            <constraint firstItem="TJe-cH-YGg" firstAttribute="top" secondItem="xtL-iT-HEF" secondAttribute="top" constant="228" id="17K-Yf-plw"/>
+                            <constraint firstItem="hfU-7B-1uE" firstAttribute="top" secondItem="TJe-cH-YGg" secondAttribute="bottom" constant="8" id="Dd4-jM-yRo"/>
                             <constraint firstItem="n10-6b-USD" firstAttribute="top" secondItem="hfU-7B-1uE" secondAttribute="bottom" constant="8" id="GpE-oV-JE7"/>
                             <constraint firstItem="pt5-u2-ZzU" firstAttribute="leading" secondItem="xtL-iT-HEF" secondAttribute="leading" constant="175" id="KeB-ML-yp0"/>
                             <constraint firstItem="xtL-iT-HEF" firstAttribute="trailing" secondItem="n10-6b-USD" secondAttribute="trailing" constant="65" id="PEm-Ug-cNO"/>
                             <constraint firstItem="xtL-iT-HEF" firstAttribute="trailing" secondItem="pt5-u2-ZzU" secondAttribute="trailing" constant="175" id="WNZ-NO-2BR"/>
                             <constraint firstItem="pt5-u2-ZzU" firstAttribute="top" secondItem="n10-6b-USD" secondAttribute="bottom" constant="32" id="bVm-mw-D6g"/>
+                            <constraint firstItem="TJe-cH-YGg" firstAttribute="leading" secondItem="xtL-iT-HEF" secondAttribute="leading" constant="65" id="bon-5h-fSq"/>
+                            <constraint firstItem="xtL-iT-HEF" firstAttribute="trailing" secondItem="TJe-cH-YGg" secondAttribute="trailing" constant="65" id="dnc-SV-wa9"/>
                             <constraint firstItem="hfU-7B-1uE" firstAttribute="leading" secondItem="xtL-iT-HEF" secondAttribute="leading" constant="65" id="eyN-b2-z6o"/>
                             <constraint firstItem="n10-6b-USD" firstAttribute="leading" secondItem="xtL-iT-HEF" secondAttribute="leading" constant="65" id="jAM-uv-msX"/>
-                            <constraint firstItem="hfU-7B-1uE" firstAttribute="top" secondItem="xtL-iT-HEF" secondAttribute="top" constant="270" id="ugK-Cc-nMk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xtL-iT-HEF"/>
                     </view>
                     <navigationItem key="navigationItem" id="O2M-Sk-FqA"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="n10-6b-USD" id="zkc-Kd-G8P"/>
+                        <outlet property="phoneNumberTextField" destination="TJe-cH-YGg" id="XU9-De-oYg"/>
+                        <outlet property="userNameTextField" destination="hfU-7B-1uE" id="Lcn-00-4sc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Xg-zV-Kia" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Ez5-wh-7Dd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="655" y="-734"/>
+            <point key="canvasLocation" x="653.62318840579712" y="-734.59821428571422"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4bY-uV-kaA">
@@ -305,15 +319,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6wS-AP-mcY">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6wS-AP-mcY">
                                 <rect key="frame" x="65" y="358" width="284" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8MX-IB-MgI">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8MX-IB-MgI">
                                 <rect key="frame" x="65" y="400" width="284" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTL-Bw-KGU">
                                 <rect key="frame" x="175" y="466" width="64" height="30"/>
@@ -322,26 +336,37 @@
                                     <segue destination="I5B-3x-p8H" kind="show" identifier="loginTableView" id="Eif-E5-xH8"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PhoneNumber" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0k-WO-8Gk">
+                                <rect key="frame" x="65" y="316" width="284" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6wS-AP-mcY" firstAttribute="leading" secondItem="SkG-Ih-gWP" secondAttribute="leading" constant="65" id="6Me-NR-JrN"/>
+                            <constraint firstItem="m0k-WO-8Gk" firstAttribute="leading" secondItem="SkG-Ih-gWP" secondAttribute="leading" constant="65" id="72R-9a-W9k"/>
+                            <constraint firstItem="SkG-Ih-gWP" firstAttribute="trailing" secondItem="m0k-WO-8Gk" secondAttribute="trailing" constant="65" id="7fD-93-SHc"/>
+                            <constraint firstItem="m0k-WO-8Gk" firstAttribute="top" secondItem="SkG-Ih-gWP" secondAttribute="top" constant="228" id="Lu4-eD-NYQ"/>
                             <constraint firstItem="SkG-Ih-gWP" firstAttribute="trailing" secondItem="8MX-IB-MgI" secondAttribute="trailing" constant="65" id="OO0-vl-7Ab"/>
-                            <constraint firstItem="6wS-AP-mcY" firstAttribute="top" secondItem="SkG-Ih-gWP" secondAttribute="top" constant="270" id="Ogo-Fu-Z8g"/>
                             <constraint firstItem="sTL-Bw-KGU" firstAttribute="leading" secondItem="SkG-Ih-gWP" secondAttribute="leading" constant="175" id="QC2-qX-txB"/>
                             <constraint firstItem="8MX-IB-MgI" firstAttribute="leading" secondItem="SkG-Ih-gWP" secondAttribute="leading" constant="65" id="XhR-TS-ANu"/>
                             <constraint firstItem="SkG-Ih-gWP" firstAttribute="trailing" secondItem="6wS-AP-mcY" secondAttribute="trailing" constant="65" id="Yko-GK-b7G"/>
                             <constraint firstItem="sTL-Bw-KGU" firstAttribute="top" secondItem="8MX-IB-MgI" secondAttribute="bottom" constant="32" id="h0h-1d-T6u"/>
+                            <constraint firstItem="6wS-AP-mcY" firstAttribute="top" secondItem="m0k-WO-8Gk" secondAttribute="bottom" constant="8" id="iJS-lV-QI9"/>
                             <constraint firstItem="8MX-IB-MgI" firstAttribute="top" secondItem="6wS-AP-mcY" secondAttribute="bottom" constant="8" id="ty0-ab-1eb"/>
                             <constraint firstItem="SkG-Ih-gWP" firstAttribute="trailing" secondItem="sTL-Bw-KGU" secondAttribute="trailing" constant="175" id="xDZ-v7-7nx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SkG-Ih-gWP"/>
                     </view>
                     <navigationItem key="navigationItem" id="cZc-oG-Qp2"/>
+                    <connections>
+                        <outlet property="phoneNumberTextField" destination="m0k-WO-8Gk" id="Ikf-Mf-Ecr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D9m-o7-BXN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="655" y="605"/>
+            <point key="canvasLocation" x="653.62318840579712" y="604.6875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="S2b-vX-tw8">
@@ -366,6 +391,6 @@
         <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RbJ-ep-kEz"/>
+        <segue reference="Eif-E5-xH8"/>
     </inferredMetricsTieBreakers>
 </document>

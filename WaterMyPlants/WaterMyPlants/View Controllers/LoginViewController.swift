@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class LoginViewController: UIViewController {
     
+    var userController: UserController!
     
+    @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var userNameTextField:UITextField!
     @IBOutlet weak var passWordTextField: UITextField!
     
@@ -20,16 +23,15 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
+        if let username = userNameTextField.text, let password = passWordTextField.text, let phoneNumber = phoneNumberTextField.text {
+            userController.signIn(with: User(username: username, password: password, phoneNumber: phoneNumber)) { (error) in
+                if let error = error {
+                    print("Error loggingin: \(error.localizedDescription)")
+                } else {
+                    self.performSegue(withIdentifier: Keys.logInToTableView, sender: self)
+                }
+            }
+        }
+        
+        }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
