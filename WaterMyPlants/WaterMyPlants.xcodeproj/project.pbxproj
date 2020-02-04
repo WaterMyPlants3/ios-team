@@ -25,6 +25,12 @@
 		DB1F236423E4EFE9005B7C27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1F236223E4EFE9005B7C27 /* Main.storyboard */; };
 		DB1F236623E4EFEA005B7C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB1F236523E4EFEA005B7C27 /* Assets.xcassets */; };
 		DB1F236923E4EFEA005B7C27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1F236723E4EFEA005B7C27 /* LaunchScreen.storyboard */; };
+		E31F98C823E8A12100AEBBCE /* AddPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F98C723E8A12100AEBBCE /* AddPlantViewController.swift */; };
+		E31F98CA23E8A4B400AEBBCE /* PlantsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F98C923E8A4B400AEBBCE /* PlantsTableViewCell.swift */; };
+		E31F98CC23E8A58500AEBBCE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F98CB23E8A58500AEBBCE /* LoginViewController.swift */; };
+		E31F98CE23E8A59A00AEBBCE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F98CD23E8A59A00AEBBCE /* SignUpViewController.swift */; };
+		E31F98D023E8AE7600AEBBCE /* PlantsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F98CF23E8AE7600AEBBCE /* PlantsDetailViewController.swift */; };
+		E3D5B6D023E89AD300E9E774 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D5B6CF23E89AD300E9E774 /* Keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +54,12 @@
 		DB1F236523E4EFEA005B7C27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB1F236823E4EFEA005B7C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB1F236A23E4EFEA005B7C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E31F98C723E8A12100AEBBCE /* AddPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantViewController.swift; sourceTree = "<group>"; };
+		E31F98C923E8A4B400AEBBCE /* PlantsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsTableViewCell.swift; sourceTree = "<group>"; };
+		E31F98CB23E8A58500AEBBCE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E31F98CD23E8A59A00AEBBCE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		E31F98CF23E8AE7600AEBBCE /* PlantsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsDetailViewController.swift; sourceTree = "<group>"; };
+		E3D5B6CF23E89AD300E9E774 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +121,11 @@
 			isa = PBXGroup;
 			children = (
 				DB13B3F823E5FC7A008192A3 /* PlantsTableViewController.swift */,
+				E31F98C723E8A12100AEBBCE /* AddPlantViewController.swift */,
+				E31F98C923E8A4B400AEBBCE /* PlantsTableViewCell.swift */,
+				E31F98CB23E8A58500AEBBCE /* LoginViewController.swift */,
+				E31F98CD23E8A59A00AEBBCE /* SignUpViewController.swift */,
+				E31F98CF23E8AE7600AEBBCE /* PlantsDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -116,6 +133,7 @@
 		DB1F235023E4EFE9005B7C27 = {
 			isa = PBXGroup;
 			children = (
+				E3D5B6CE23E89A8E00E9E774 /* Keys */,
 				DB1F235B23E4EFE9005B7C27 /* WaterMyPlants */,
 				DB1F235A23E4EFE9005B7C27 /* Products */,
 			);
@@ -141,6 +159,14 @@
 				DB13B3E023E5F9EA008192A3 /* Resources */,
 			);
 			path = WaterMyPlants;
+			sourceTree = "<group>";
+		};
+		E3D5B6CE23E89A8E00E9E774 /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				E3D5B6CF23E89AD300E9E774 /* Keys.swift */,
+			);
+			path = Keys;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,17 +240,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E31F98C823E8A12100AEBBCE /* AddPlantViewController.swift in Sources */,
 				DB13B3FB23E8B212008192A3 /* User Controller.swift in Sources */,
 				DB13B3E623E5FA8B008192A3 /* CoreDataStack.swift in Sources */,
 				DB13B3F523E5FC28008192A3 /* PlantImageController.swift in Sources */,
+				DB13B3F323E5FC10008192A3 /* PlantImage.swift in Sources */,
+				E31F98D023E8AE7600AEBBCE /* PlantsDetailViewController.swift in Sources */,
 				DB13B3EF23E5FABE008192A3 /* PlantRepresentation.swift in Sources */,
+				E3D5B6D023E89AD300E9E774 /* Keys.swift in Sources */,
+				E31F98CE23E8A59A00AEBBCE /* SignUpViewController.swift in Sources */,
 				DB13B40123E8B349008192A3 /* NetworkErrors.swift in Sources */,
 				DB13B3FF23E8B30C008192A3 /* HTTPMethods.swift in Sources */,
 				DB13B3E423E5FA06008192A3 /* WaterMyPlants.xcdatamodeld in Sources */,
 				DB13B3E823E5FA9B008192A3 /* Plant+Convenience.swift in Sources */,
+				E31F98CA23E8A4B400AEBBCE /* PlantsTableViewCell.swift in Sources */,
 				DB13B3ED23E5FAB2008192A3 /* User.swift in Sources */,
 				DB13B3F923E5FC7A008192A3 /* PlantsTableViewController.swift in Sources */,
 				DB13B3F723E5FC51008192A3 /* PlantController.swift in Sources */,
+				E31F98CC23E8A58500AEBBCE /* LoginViewController.swift in Sources */,
 				DB13B3FD23E8B236008192A3 /* Bearer.swift in Sources */,
 				DB13B3EB23E5FAAC008192A3 /* PersistenceProtocol.swift in Sources */,
 				DB1F235D23E4EFE9005B7C27 /* AppDelegate.swift in Sources */,
@@ -304,7 +337,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -358,7 +391,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
