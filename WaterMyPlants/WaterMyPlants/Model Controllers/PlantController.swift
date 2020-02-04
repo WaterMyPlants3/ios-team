@@ -60,38 +60,8 @@ class PlantController {
         }.resume()
     }
     
-    func updatePlant(with representation: [PlantRepresentation]) throws {
-        let entriesWithId = representation.filter { $0.identifier != nil }
-        let identifiersToFetch = entriesWithId.compactMap { $0.identifier! }
-        let representationByID = Dictionary(uniqueKeysWithValues: zip(identifiersToFetch, entriesWithId))
-
-        var entriesToCreate = representationByID
-
-        let fetchRequest: NSFetchRequest<Plant> = Plant.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "identifier IN %@", identifiersToFetch)
-
-        let context = CoreDataStack.shared.container.newBackgroundContext()
-        context.perform {
-            do {
-                let existingPlants = try context.fetch(fetchRequest)
-
-                for plant in existingPlants {
-                    guard let id = plant.identifier,
-                        let representation = representationByID[id] else { continue }
-
-                    self.update(plant: plant, with: representation)
-                    entriesToCreate.removeValue(forKey: id)
-                }
-
-                for representation in entriesToCreate.values {
-                    Plant(
-                }
-            } catch {
-                print("Error fetching entries for UUIDs: \(error)")
-            }
-        }
-
-        try CoreDataStack.shared.save(in: context)
+    func updatePlant(with representation: [PlantRepresentation]) {
+        
     }
 
     private func update(plant: Plant, with representation: PlantRepresentation) {
