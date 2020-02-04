@@ -9,14 +9,19 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    
+    @IBOutlet weak var userNameTextField:UITextField!
+    @IBOutlet weak var passWordTextField: UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func signUpButtonTapped(_ sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 

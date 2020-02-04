@@ -11,8 +11,9 @@ import UIKit
 class PlantsDetailViewController: UIViewController {
 
     @IBOutlet weak var plantImageView: UIImageView!
-    
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var NickNameLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
