@@ -10,6 +10,12 @@ import UIKit
 
 class PlantsTableViewCell: UITableViewCell {
     
+    var plantRepresentation: PlantRepresentation? {
+        didSet {
+            updateViews()
+        }
+    }
+    
     @IBOutlet weak var plantName: UILabel!
     @IBOutlet weak var speciesName: UILabel!
     @IBOutlet weak var plantImage: UIImageView!
@@ -19,17 +25,20 @@ class PlantsTableViewCell: UITableViewCell {
             updateViews()
         }
     }
-    
+   
     private func updateViews() {
-        guard let plant = plant else { return }
+        guard let plant = plant,
+            let plantRepresentation = plantRepresentation else { return }
         
         plantName.text = plant.nickname
         speciesName.text = plant.species
-        plantImage.image = UIImage(cgImage: plantImage as! CGImage)
+        plantImage.image = UIImage(named: plantRepresentation.imageName)
         
         
         
     }
+    
+    
     
 //    override func awakeFromNib() {
 //        super.awakeFromNib()
@@ -43,3 +52,4 @@ class PlantsTableViewCell: UITableViewCell {
 //    }
 
 }
+

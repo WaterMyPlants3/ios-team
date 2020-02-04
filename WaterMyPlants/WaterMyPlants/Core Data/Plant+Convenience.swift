@@ -14,6 +14,15 @@ import CoreData
 let context = persistentStoreController.mainContext
 
  extension Plant: Persistable, PersistentStoreControllerDelegate {
+    
+    var plantRepresentation: PlantRepresentation? {
+        guard let nickname = nickname,
+        let imageName = imageName,
+        let species = species else { return nil }
+        
+        return PlantRepresentation(nickname: nickname, imageName: imageName, identifier: identifier, h2oFrequency: h2oFrequency, species: species)
+        
+    }
     // Need initalizers to handle representation and local inits
     @discardableResult convenience init?(h2oFrequency: Int, imageName: String, nickname: String, identifier: UUID = UUID(), context: PersistentContext) {
         
@@ -36,4 +45,7 @@ let context = persistentStoreController.mainContext
         
         self.init(h2oFrequency: Int(h2oFrequency), imageName: imageName, nickname: nickname, identifier: identifier, context: context)
     }
+    
+   
+    
  }
