@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dgz-Bd-mrM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dgz-Bd-mrM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,6 +24,7 @@
                                 <rect key="frame" x="175" y="466" width="64" height="30"/>
                                 <state key="normal" title="Signup"/>
                                 <connections>
+                                    <action selector="signUpButtonTapped:" destination="Ez5-wh-7Dd" eventType="touchUpInside" id="AjJ-Tm-cCx"/>
                                     <segue destination="I5B-3x-p8H" kind="show" identifier="SigntoTableView" id="RbJ-ep-kEz"/>
                                 </connections>
                             </button>
@@ -50,6 +51,7 @@
                     <navigationItem key="navigationItem" id="O2M-Sk-FqA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Xg-zV-Kia" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Ez5-wh-7Dd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="655" y="-734"/>
         </scene>
@@ -199,6 +201,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="lCV-4h-Gzw"/>
                     <connections>
+                        <outlet property="NickNameLabel" destination="M6s-uw-KU2" id="wmV-PX-zgG"/>
                         <outlet property="nameLabel" destination="CC0-xX-AJx" id="cgP-YU-Yvh"/>
                         <outlet property="plantImageView" destination="y1H-WQ-No7" id="WeX-H1-F5T"/>
                     </connections>
@@ -282,6 +285,13 @@
                     <navigationItem key="navigationItem" id="j3f-ee-lPa">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="FPa-Gp-6CG"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="SpeciesTextField" destination="G8M-Dd-3Ue" id="arJ-pw-fZh"/>
+                        <outlet property="datePicker" destination="frB-3b-gbY" id="9qz-ft-0G4"/>
+                        <outlet property="plantImageView" destination="NME-2U-Fmz" id="D16-hq-TfW"/>
+                        <outlet property="plantNameTextField" destination="Ps0-VG-qlY" id="FNc-lo-nsA"/>
+                        <outlet property="waterPerDayTextField" destination="6Pb-In-UMY" id="Qiz-vI-oEq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1H-v7-ynU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

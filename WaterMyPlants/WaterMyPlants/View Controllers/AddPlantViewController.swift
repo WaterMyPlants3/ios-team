@@ -11,8 +11,11 @@ import UIKit
 class AddPlantViewController: UIViewController {
     
     // Mark- Outlets
-    
-    
+    @IBOutlet weak var plantNameTextField: UITextField!
+    @IBOutlet weak var waterPerDayTextField: UITextField!
+    @IBOutlet weak var SpeciesTextField: UITextField!
+    @IBOutlet weak var plantImageView: UIImageView!
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     
 
