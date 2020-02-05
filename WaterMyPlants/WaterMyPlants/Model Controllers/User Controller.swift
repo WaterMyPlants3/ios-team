@@ -28,6 +28,8 @@ class UserController {
         do {
             let jsonData = try jsonEncoder.encode(user)
             request.httpBody = jsonData
+            let jsonString = String.init(data: jsonData, encoding: .utf8)
+            print(jsonString!)
         } catch {
             print("Error encoding user object \(error)")
             completion(error)
@@ -61,6 +63,8 @@ class UserController {
         do {
             let jsonData = try jsonEncoder.encode(user)
             request.httpBody = jsonData
+            let jsonString = String.init(data: jsonData, encoding: .utf8)
+            print(jsonString!)
         } catch {
             print("Error encoding user object \(error)")
             completion(error)
@@ -87,6 +91,7 @@ class UserController {
             do {
                 self.bearer = try decoder.decode(BearerToken.self, from: data)
                 self.userID = try decoder.decode(UserID.self, from: data)
+                print(self.userID!)
             } catch {
                 print("Error decoding bearer token \(error)")
                 completion(error)

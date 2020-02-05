@@ -15,5 +15,5 @@ struct User: Codable, Hashable {
 }
 
 struct UserID: Codable, Hashable {
-    var userId: Int?
+    var id: Int?
 }
