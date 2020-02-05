@@ -18,10 +18,27 @@ class AddPlantViewController: UIViewController {
     
     var plantArray = [PlantRepresentation]()
     var plantController = PlantController()
+    var plant: Plant? {
+        didSet {
+            updateViews()
+        }
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateViews()
+    }
+    
+    
+    func updateViews() {
+        title = plant?.nickname ?? "Plant Name"
+        plantNameTextField.text = plant?.nickname
+        SpeciesTextField.text = plant?.species
+        let waterInt = waterPerDayTextField.text
+        let intiger = (waterInt as! NSString).integerValue
+        let int64 = Int64(intiger)
+        
     }
     
     
