@@ -35,8 +35,8 @@ class AddPlantViewController: UIViewController {
         title = plant?.nickname ?? "Plant Name"
         plantNameTextField.text = plant?.nickname
         SpeciesTextField.text = plant?.species
-        let waterInt = waterPerDayTextField.text
-        let intiger = (waterInt as! NSString).integerValue
+        guard let waterInt = waterPerDayTextField.text else { return }
+        let intiger = (waterInt as NSString).integerValue
         let int64 = Int64(intiger)
         
     }

@@ -3,4 +3,134 @@
    uuid = "E410586D-489F-49F3-B707-56F7BF090306"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B0D21CBD-9788-4EB1-B8CB-527E4C9F2B03"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WaterMyPlants/Model Controllers/User Controller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "signIn(with:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B0D21CBD-9788-4EB1-B8CB-527E4C9F2B03 - aabbd544fe1c1ef4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WaterMyPlants.UserController.signIn(with: WaterMyPlants.User, completion: (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WaterMyPlants"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/patrickmillet/Documents/Development/waterMyPlants/WaterMyPlants/WaterMyPlants/Model%20Controllers/User%20Controller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "1020">
+               </Location>
+               <Location
+                  uuid = "B0D21CBD-9788-4EB1-B8CB-527E4C9F2B03 - 98640755a56d5f5b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in WaterMyPlants.UserController.signIn(with: WaterMyPlants.User, completion: (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WaterMyPlants"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/patrickmillet/Documents/Development/waterMyPlants/WaterMyPlants/WaterMyPlants/Model%20Controllers/User%20Controller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "363">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2B6F0BE9-A4A5-45F3-ADB1-7704618DDD1D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WaterMyPlants/View Controllers/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "signInButtonTapped(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2B6F0BE9-A4A5-45F3-ADB1-7704618DDD1D - d70e46c790d2b2b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WaterMyPlants.LoginViewController.signInButtonTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "WaterMyPlants"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/patrickmillet/Documents/Development/waterMyPlants/WaterMyPlants/WaterMyPlants/View%20Controllers/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "1146">
+               </Location>
+               <Location
+                  uuid = "2B6F0BE9-A4A5-45F3-ADB1-7704618DDD1D - c9946cc8d070d7e8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in WaterMyPlants.LoginViewController.signInButtonTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "WaterMyPlants"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/patrickmillet/Documents/Development/waterMyPlants/WaterMyPlants/WaterMyPlants/View%20Controllers/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "126">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "459D282E-2FA6-495A-B876-DFC6C8B01ADC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WaterMyPlants/View Controllers/SignUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "SignUpButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "67DB1E2E-289E-4E17-AD7F-4FA07BCD890E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WaterMyPlants/Model Controllers/User Controller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "signUp(with:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

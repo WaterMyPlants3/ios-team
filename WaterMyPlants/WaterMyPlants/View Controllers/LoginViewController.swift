@@ -21,16 +21,16 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func signUpButtonTapped(_ sender: UIButton) {
-        if let username = userNameTextField.text, let password = passWordTextField.text {
-            userController.signIn(with: User(username: username, password: password)) { (error) in
+    @IBAction func signInButtonTapped(_ sender: UIButton) {
+        guard let username = userNameTextField.text,
+            let password = passWordTextField.text else { return }
+        
+            userController.signIn(with: User(username: username, password: password)) { error in
                 if let error = error {
                     print("Error loggingin: \(error.localizedDescription)")
                 } else {
                     self.performSegue(withIdentifier: Keys.logInToTableView, sender: self)
                 }
             }
-        }
-        
         }
     }

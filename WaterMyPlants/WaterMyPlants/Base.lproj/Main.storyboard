@@ -133,13 +133,13 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NNR-Yi-NLs">
                                                     <rect key="frame" x="0.0" y="10" width="52" height="54.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKU-e2-PMd">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKU-e2-PMd">
                                                             <rect key="frame" x="0.0" y="0.0" width="52" height="24"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIy-ur-Lwa">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIy-ur-Lwa">
                                                             <rect key="frame" x="0.0" y="34" width="52" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -379,6 +379,7 @@
                                 <rect key="frame" x="175" y="466" width="64" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
+                                    <action selector="signInButtonTapped:" destination="sor-dW-qlE" eventType="touchUpInside" id="KY8-rK-hRw"/>
                                     <segue destination="I5B-3x-p8H" kind="show" identifier="loginTableView" id="Eif-E5-xH8"/>
                                 </connections>
                             </button>
@@ -398,6 +399,10 @@
                         <viewLayoutGuide key="safeArea" id="SkG-Ih-gWP"/>
                     </view>
                     <navigationItem key="navigationItem" id="cZc-oG-Qp2"/>
+                    <connections>
+                        <outlet property="passWordTextField" destination="8MX-IB-MgI" id="Rye-si-wFd"/>
+                        <outlet property="userNameTextField" destination="6wS-AP-mcY" id="um3-iY-A8k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D9m-o7-BXN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
