@@ -108,8 +108,8 @@ class PlantController {
                     let existingPlants = try context.fetch(fetchRequest)
 
                     for plant in existingPlants {
-                        guard let id = plant.plantKey,
-                            let representation = representationByID[id] else { continue }
+                         let id = plant.plantKey
+                        guard let representation = representationByID[id] else { continue }
 
                         self.update(plant: plant, with: representation)
                         entriesToCreate.removeValue(forKey: id)
@@ -124,6 +124,10 @@ class PlantController {
             }
         try CoreDataStack.shared.save(in: context)
         }
+    
+    private func deletePlantFromServer(_ plant: Plant, completion: @escaping (Error?) -> Void = { _ in}) {
+        
+    }
 
     private func update(plant: Plant, with representation: PlantRepresentation) {
         plant.nickname = representation.nickname
@@ -136,8 +140,23 @@ class PlantController {
     func createPlant(with name: String, species: String, h2oFrequency: Int64) {
     guard  let plant = Plant(h2oFrequency: Int(h2oFrequency), nickname: name, species: species, context: context) else { return }
         put(plant: plant)
-        try? CoreDataStack.shared.save(in: context)
-}
+        do {
+        try CoreDataStack.shared.save(in: context)
+        } catch {
+            print("Error saving plant object \(error)")
+        }
+    }
+    
+    func delete(for plant: Plant, context: PersistentContext) {
+        deletePlantFromServer(plant)
+        do {
+           try CoreDataStack.shared.delete(plant, in: context)
+            try CoreDataStack.shared.save(in: context)
+        } catch {
+            context.reset()
+            print("Error deleting plant from MOC \(error)")
+        }
+    }
     
     
     }
