@@ -13,3 +13,7 @@ struct User: Codable, Hashable {
     var password: String
     var phoneNumber: String?
 }
+
+struct UserID: Codable, Hashable {
+    var userId: Int?
+}
