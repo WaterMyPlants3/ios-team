@@ -125,7 +125,8 @@ class PlantController {
         try CoreDataStack.shared.save(in: context)
         }
     
-    private func deletePlantFromServer(_ plant: Plant, completion: @escaping (Error?) -> Void = { _ in}) {
+     func deletePlantFromServer(_ plant: Plant, completion: @escaping CompletionHandler = { _ in}) {
+        
         
     }
 
