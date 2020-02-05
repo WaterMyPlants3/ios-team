@@ -11,7 +11,7 @@ import CoreData
 
 class LoginViewController: UIViewController {
     
-    var userController: UserController!
+    var userController: UserController = UserController.sharedInstance
     
     @IBOutlet weak var userNameTextField:UITextField!
     @IBOutlet weak var passWordTextField: UITextField!

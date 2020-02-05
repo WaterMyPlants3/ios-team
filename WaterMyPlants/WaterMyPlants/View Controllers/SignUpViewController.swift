@@ -11,11 +11,10 @@ import CoreData
 
 class SignUpViewController: UIViewController {
     
-    var userController = UserController()
+    var userController = UserController() // Use shared instance to segue into view controller after sign in with the given username and password
         
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var phoneNumberTextField: UITextField!
     
 
     override func viewDidLoad() {
@@ -23,10 +22,9 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func SignUpButtonTapped(_ sender: UIButton) {
+        let phoneNumber = "123-456-7890"
          if let username = userNameTextField.text,
-            let password = passwordTextField.text,
-            let phoneNumber = phoneNumberTextField.text {
-            userController.signUp(with: User(username: username,
+            let password = passwordTextField.text {            userController.signUp(with: User(username: username,
                                              password: password,
                                              phoneNumber: phoneNumber)) { (error) in 
                 if let error = error {

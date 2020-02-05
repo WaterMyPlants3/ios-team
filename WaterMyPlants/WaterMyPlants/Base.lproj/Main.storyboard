@@ -15,52 +15,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hfU-7B-1uE">
-                                <rect key="frame" x="65" y="358" width="284" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pt5-u2-ZzU">
-                                <rect key="frame" x="175" y="466" width="64" height="30"/>
-                                <state key="normal" title="Signup"/>
-                                <connections>
-                                    <action selector="SignUpButtonTapped:" destination="6kr-MK-IiY" eventType="touchUpInside" id="jPw-Mg-FOk"/>
-                                    <action selector="signUpButtonTapped:" destination="Ez5-wh-7Dd" eventType="touchUpInside" id="AjJ-Tm-cCx"/>
-                                    <segue destination="I5B-3x-p8H" kind="show" identifier="SigntoTableView" id="RbJ-ep-kEz"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PassWord" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n10-6b-USD">
-                                <rect key="frame" x="65" y="400" width="284" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PhoneNumber" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TJe-cH-YGg">
-                                <rect key="frame" x="65" y="316" width="284" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KTy-bX-ngh">
+                                <rect key="frame" x="80" y="391" width="254" height="114"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hfU-7B-1uE">
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PassWord" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n10-6b-USD">
+                                        <rect key="frame" x="0.0" y="42" width="254" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pt5-u2-ZzU">
+                                        <rect key="frame" x="0.0" y="84" width="254" height="30"/>
+                                        <state key="normal" title="Signup"/>
+                                        <connections>
+                                            <action selector="SignUpButtonTapped:" destination="6kr-MK-IiY" eventType="touchUpInside" id="jPw-Mg-FOk"/>
+                                            <action selector="signUpButtonTapped:" destination="Ez5-wh-7Dd" eventType="touchUpInside" id="AjJ-Tm-cCx"/>
+                                            <segue destination="I5B-3x-p8H" kind="show" identifier="SigntoTableView" id="RbJ-ep-kEz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="xtL-iT-HEF" firstAttribute="trailing" secondItem="hfU-7B-1uE" secondAttribute="trailing" constant="65" id="0AB-MY-cji"/>
-                            <constraint firstItem="TJe-cH-YGg" firstAttribute="top" secondItem="xtL-iT-HEF" secondAttribute="top" constant="228" id="17K-Yf-plw"/>
-                            <constraint firstItem="hfU-7B-1uE" firstAttribute="top" secondItem="TJe-cH-YGg" secondAttribute="bottom" constant="8" id="Dd4-jM-yRo"/>
-                            <constraint firstItem="n10-6b-USD" firstAttribute="top" secondItem="hfU-7B-1uE" secondAttribute="bottom" constant="8" id="GpE-oV-JE7"/>
-                            <constraint firstItem="pt5-u2-ZzU" firstAttribute="leading" secondItem="xtL-iT-HEF" secondAttribute="leading" constant="175" id="KeB-ML-yp0"/>
-                            <constraint firstItem="xtL-iT-HEF" firstAttribute="trailing" secondItem="n10-6b-USD" secondAttribute="trailing" constant="65" id="PEm-Ug-cNO"/>
-                            <constraint firstItem="xtL-iT-HEF" firstAttribute="trailing" secondItem="pt5-u2-ZzU" secondAttribute="trailing" constant="175" id="WNZ-NO-2BR"/>
-                            <constraint firstItem="pt5-u2-ZzU" firstAttribute="top" secondItem="n10-6b-USD" secondAttribute="bottom" constant="32" id="bVm-mw-D6g"/>
-                            <constraint firstItem="TJe-cH-YGg" firstAttribute="leading" secondItem="xtL-iT-HEF" secondAttribute="leading" constant="65" id="bon-5h-fSq"/>
-                            <constraint firstItem="xtL-iT-HEF" firstAttribute="trailing" secondItem="TJe-cH-YGg" secondAttribute="trailing" constant="65" id="dnc-SV-wa9"/>
-                            <constraint firstItem="hfU-7B-1uE" firstAttribute="leading" secondItem="xtL-iT-HEF" secondAttribute="leading" constant="65" id="eyN-b2-z6o"/>
-                            <constraint firstItem="n10-6b-USD" firstAttribute="leading" secondItem="xtL-iT-HEF" secondAttribute="leading" constant="65" id="jAM-uv-msX"/>
+                            <constraint firstItem="KTy-bX-ngh" firstAttribute="leading" secondItem="xtL-iT-HEF" secondAttribute="leading" constant="80" id="JL8-pW-AhT"/>
+                            <constraint firstItem="KTy-bX-ngh" firstAttribute="centerX" secondItem="0Sp-Pm-BJr" secondAttribute="centerX" id="RhA-Gm-qtA"/>
+                            <constraint firstItem="xtL-iT-HEF" firstAttribute="trailing" secondItem="KTy-bX-ngh" secondAttribute="trailing" constant="80" id="TI5-qD-xfk"/>
+                            <constraint firstItem="KTy-bX-ngh" firstAttribute="centerY" secondItem="0Sp-Pm-BJr" secondAttribute="centerY" id="wcz-5a-WdK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xtL-iT-HEF"/>
                     </view>
                     <navigationItem key="navigationItem" id="O2M-Sk-FqA"/>
                     <connections>
                         <outlet property="passwordTextField" destination="n10-6b-USD" id="zkc-Kd-G8P"/>
-                        <outlet property="phoneNumberTextField" destination="TJe-cH-YGg" id="XU9-De-oYg"/>
                         <outlet property="userNameTextField" destination="hfU-7B-1uE" id="Lcn-00-4sc"/>
                     </connections>
                 </viewController>
@@ -396,6 +387,6 @@
         <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Eif-E5-xH8"/>
+        <segue reference="RbJ-ep-kEz"/>
     </inferredMetricsTieBreakers>
 </document>
