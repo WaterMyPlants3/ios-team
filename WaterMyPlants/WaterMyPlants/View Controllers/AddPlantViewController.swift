@@ -12,9 +12,9 @@ class AddPlantViewController: UIViewController {
     
     //Outlets
     @IBOutlet weak var plantNameTextField: UITextField!
-    @IBOutlet weak var waterPerDayTextField: UITextField!
     @IBOutlet weak var SpeciesTextField: UITextField!
-    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var waterFerquencySelector: UISegmentedControl!
+    
     
     var plantArray = [PlantRepresentation]()
     var plantController = PlantController()
@@ -35,32 +35,25 @@ class AddPlantViewController: UIViewController {
         title = plant?.nickname ?? "Plant Name"
         plantNameTextField.text = plant?.nickname
         SpeciesTextField.text = plant?.species
-        let waterInt = waterPerDayTextField.text
-        let intiger = (waterInt as! NSString).integerValue
-        let int64 = Int64(intiger)
+        let waterFre: WaterFrequency
+        if let waterFerquency = plant?.h2oFrequency {
+            waterFre = WaterFrequency(rawValue: waterFerquency) ?? .once
+        }
+        
+        
         
     }
     
     
     @IBAction func SaveButtonTapped(_ sender: UIBarButtonItem) {
-        
-        guard let plantName = plantNameTextField.text,
-            let waterPerDay = waterPerDayTextField.text,
-            let species = SpeciesTextField.text,
-            let date = datePicker.self else { return }
-        
-        let intiger = (waterPerDay as NSString).integerValue
-        let int64 = Int64(intiger)
-        
-        if !plantName.isEmpty, !waterPerDay.isEmpty, !species.isEmpty {
-            plantController.createPlant(with: plantName, species: species, h2oFrequency: int64)
+        guard let name = plantNameTextField.text, let species = SpeciesTextField.text else { return }
+        let waterIndex = waterFerquencySelector.selectedSegmentIndex
+        let watering = WaterFrequency.allCase[waterIndex]
+        if let plant = plant {
+            plantController.createPlant(with: name, species: species, h2oFrequency: watering.rawValue)
+            navigationController?.popViewController(animated: true)
         }
-            
-        
+        }
     }
     
-    
-    
-    
-    
-}
+
