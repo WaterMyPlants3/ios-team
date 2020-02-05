@@ -5,7 +5,7 @@
 //  Created by Patrick Millet on 2/1/20.
 //  Copyright © 2020 WaterMyPlants3. All rights reserved.
 //
-import UIKit
+
 import Foundation
 import CoreData
 
@@ -99,11 +99,5 @@ class PlantController {
         plant.h2oFrequency = representation.h2oFrequency
         plant.species = representation.species
         
-    }
-    
-    func createPlant(with name:String, species: String, h2oFrequency: Int64) {
-        guard  let plant = Plant(h2oFrequency: Int(h2oFrequency), nickname: name, context: context) else { return }
-        put(plant: plant)
-        try? CoreDataStack.shared.save(in: context)
     }
 }
