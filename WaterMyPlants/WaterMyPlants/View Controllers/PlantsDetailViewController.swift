@@ -15,15 +15,16 @@ class PlantsDetailViewController: UIViewController {
     @IBOutlet weak var NickNameLabel: UILabel!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    var plant: Plant? {
-        didSet {
-            updateViews()
-        }
-    }
+    
+    
+    var plant: Plant?
+    
+    var plantController: PlantController?
      
     func updateViews() {
         guard let plant = plant else { return }
