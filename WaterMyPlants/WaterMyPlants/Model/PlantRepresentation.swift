@@ -13,7 +13,7 @@ import UIKit
 
 struct PlantRepresentation: Equatable, Codable {
     var nickname: String
-    var plantKey: Int?
+    var plantKey: Int64?
     var species: String?
     var h2oFrequency: Int64
 }
