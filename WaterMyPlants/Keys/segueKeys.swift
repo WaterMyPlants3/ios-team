@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Keys {
+struct segueKeys {
     
     static let signUpSegue = "SignupSegue"
     static let logInSegue = "LoginSegue"
@@ -16,5 +16,10 @@ struct Keys {
     static let logInToTableView = "loginTableView"
     static let PlantDetialSegue = "PlantDetialSegue"
     static let AddPlantSegue = "AddPlantSegue"
+
+}
+
+struct cellKeys {
+    
     
 }

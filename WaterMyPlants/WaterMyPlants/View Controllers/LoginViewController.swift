@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
                 if let error = error {
                     print("Error loggingin: \(error.localizedDescription)")
                 } else {
-                    self.performSegue(withIdentifier: Keys.logInToTableView, sender: self)
+                    self.performSegue(withIdentifier: segueKeys.logInToTableView, sender: self)
                 }
             }
         }

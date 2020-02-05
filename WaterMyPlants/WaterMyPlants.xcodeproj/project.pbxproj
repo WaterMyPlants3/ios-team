@@ -32,7 +32,7 @@
 		E31F98CC23E8A58500AEBBCE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F98CB23E8A58500AEBBCE /* LoginViewController.swift */; };
 		E31F98CE23E8A59A00AEBBCE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F98CD23E8A59A00AEBBCE /* SignUpViewController.swift */; };
 		E31F98D023E8AE7600AEBBCE /* PlantsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F98CF23E8AE7600AEBBCE /* PlantsDetailViewController.swift */; };
-		E3D5B6D023E89AD300E9E774 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D5B6CF23E89AD300E9E774 /* Keys.swift */; };
+		E3D5B6D023E89AD300E9E774 /* segueKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D5B6CF23E89AD300E9E774 /* segueKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,7 +65,7 @@
 		E31F98CB23E8A58500AEBBCE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E31F98CD23E8A59A00AEBBCE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E31F98CF23E8AE7600AEBBCE /* PlantsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsDetailViewController.swift; sourceTree = "<group>"; };
-		E3D5B6CF23E89AD300E9E774 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		E3D5B6CF23E89AD300E9E774 /* segueKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = segueKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +94,6 @@
 				53323DAD7968885F90C07B09 /* Pods-WaterMyPlants.debug.xcconfig */,
 				704EDC61B58070C709A0363B /* Pods-WaterMyPlants.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -192,7 +191,7 @@
 		E3D5B6CE23E89A8E00E9E774 /* Keys */ = {
 			isa = PBXGroup;
 			children = (
-				E3D5B6CF23E89AD300E9E774 /* Keys.swift */,
+				E3D5B6CF23E89AD300E9E774 /* segueKeys.swift */,
 			);
 			path = Keys;
 			sourceTree = "<group>";
@@ -300,7 +299,7 @@
 				DB13B3F523E5FC28008192A3 /* PlantImageController.swift in Sources */,
 				E31F98D023E8AE7600AEBBCE /* PlantsDetailViewController.swift in Sources */,
 				DB13B3EF23E5FABE008192A3 /* PlantRepresentation.swift in Sources */,
-				E3D5B6D023E89AD300E9E774 /* Keys.swift in Sources */,
+				E3D5B6D023E89AD300E9E774 /* segueKeys.swift in Sources */,
 				E31F98CE23E8A59A00AEBBCE /* SignUpViewController.swift in Sources */,
 				DB13B40123E8B349008192A3 /* NetworkErrors.swift in Sources */,
 				DB13B3FF23E8B30C008192A3 /* HTTPMethods.swift in Sources */,

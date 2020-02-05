@@ -24,13 +24,14 @@ class SignUpViewController: UIViewController {
     @IBAction func SignUpButtonTapped(_ sender: UIButton) {
         let phoneNumber = "123-456-7890"
          if let username = userNameTextField.text,
-            let password = passwordTextField.text {            userController.signUp(with: User(username: username,
+            let password = passwordTextField.text {
+            userController.signUp(with: User(username: username,
                                              password: password,
                                              phoneNumber: phoneNumber)) { (error) in 
                 if let error = error {
                     print("Error sign up: \(error.localizedDescription)")
                 } else {
-                    self.performSegue(withIdentifier: Keys.signToTableView, sender: self)
+                    self.performSegue(withIdentifier: segueKeys.signToTableView, sender: self)
                 }
             }
         }
