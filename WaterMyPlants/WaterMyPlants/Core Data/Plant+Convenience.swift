@@ -23,14 +23,25 @@ let context = persistentStoreController.mainContext
         
     }
     // Need initalizers to handle representation and local inits
-    @discardableResult convenience init?(h2oFrequency: Int, nickname: String, species: String, plantKey: Int, context: PersistentContext) {
+    @discardableResult convenience init?(h2oFrequency: Int64?, nickname: String, species: String, plantKey: Int64?, context: PersistentContext) {
         
         guard let context = context as? NSManagedObjectContext else { return nil }
-        
+        guard let h2oFrequency = h2oFrequency,
+              let plantKey = plantKey else { return nil }
         self.init(context: context)
         
+        self.h2oFrequency = h2oFrequency
+        self.nickname = nickname
+        self.plantKey = plantKey
+    }
+    
+    @discardableResult convenience init?(h2oFrequency: Int, nickname: String, species: String, context: PersistentContext) {
+        
+        guard let context = context as? NSManagedObjectContext else {return nil}
+        self.init(context: context)
         self.h2oFrequency = Int64(h2oFrequency)
         self.nickname = nickname
+        self.species = species
     }
     
     @discardableResult convenience init?(plantRepresentation: PlantRepresentation, context: PersistentContext) {
@@ -40,7 +51,7 @@ let context = persistentStoreController.mainContext
         let nickname = plantRepresentation.nickname
         guard let species = plantRepresentation.species else { return nil }
         
-        self.init(h2oFrequency: Int(h2oFrequency), nickname: nickname, species: species, plantKey: plantKey, context: context)
+        self.init(h2oFrequency: h2oFrequency, nickname: nickname, species: species, plantKey: Int64(plantKey), context: context)
     }
     
    
