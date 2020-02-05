@@ -14,10 +14,10 @@ class AddPlantViewController: UIViewController {
     @IBOutlet weak var plantNameTextField: UITextField!
     @IBOutlet weak var waterPerDayTextField: UITextField!
     @IBOutlet weak var SpeciesTextField: UITextField!
-    @IBOutlet weak var plantImageView: UIImageView!
     @IBOutlet weak var datePicker: UIDatePicker!
     
     var plantArray = [PlantRepresentation]()
+    var plantController = PlantController()
     
     
     override func viewDidLoad() {
@@ -30,11 +30,13 @@ class AddPlantViewController: UIViewController {
         guard let plantName = plantNameTextField.text,
             let waterPerDay = waterPerDayTextField.text,
             let species = SpeciesTextField.text,
-            let plantImage = plantImageView.image,
             let date = datePicker.self else { return }
         
+        let intiger = (waterPerDay as NSString).integerValue
+        let int64 = Int64(intiger)
+        
         if !plantName.isEmpty, !waterPerDay.isEmpty, !species.isEmpty {
-            plantArray.append(<#T##newElement: PlantRepresentation##PlantRepresentation#>)
+            plantController.createPlant(with: plantName, species: species, h2oFrequency: int64)
         }
             
         
