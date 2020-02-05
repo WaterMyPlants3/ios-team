@@ -53,8 +53,9 @@ class PlantController {
     
     
     func fetchPlantsFromServer(completion: @escaping (Error?) -> Void = { _ in }) {
+        guard let userID = UserController.sharedInstance.userID else { return }
         
-        let requestURL = firebaseURL.appendingPathExtension("json")
+        let requestURL = databaseURL.appendingPathExtension("api/users/\(userID)/plants")
 
         var request = URLRequest(url: requestURL)
         request.httpMethod = "GET"
