@@ -17,10 +17,9 @@ let context = persistentStoreController.mainContext
     
     var plantRepresentation: PlantRepresentation? {
         guard let nickname = nickname,
-        let imageName = imageName,
         let species = species else { return nil }
         
-        return PlantRepresentation(nickname: nickname, imageName: imageName, identifier: identifier, h2oFrequency: h2oFrequency, species: species)
+        return PlantRepresentation(nickname: nickname, species: species, h2oFrequency: h2oFrequency)
         
     }
     // Need initalizers to handle representation and local inits
@@ -31,19 +30,17 @@ let context = persistentStoreController.mainContext
         self.init(context: context)
         
         self.h2oFrequency = Int64(h2oFrequency)
-        self.imageName = imageName
         self.nickname = nickname
-        self.identifier = identifier
     }
     
     @discardableResult convenience init?(plantRepresentation: PlantRepresentation, context: PersistentContext) {
-        guard let identifier = plantRepresentation.identifier else { return nil }
+        guard let plantKey = plantRepresentation.plantKey else { return nil }
         
         let h2oFrequency = plantRepresentation.h2oFrequency
-        let imageName = plantRepresentation.imageName
         let nickname = plantRepresentation.nickname
+        let species = plantRepresentation.species
         
-        self.init(h2oFrequency: Int(h2oFrequency), imageName: imageName, nickname: nickname, identifier: identifier, context: context)
+        self.init(h2oFrequency: Int(h2oFrequency), nickname: nickname, plantKey: plantKey, context: context)
     }
     
    

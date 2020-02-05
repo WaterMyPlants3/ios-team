@@ -15,8 +15,9 @@ class UserController {
     private let baseURL = URL(string: "https://water-my-plant-9000.herokuapp.com/")!
     var bearer: BearerToken?
     var user: User?
+    var userID: UserID?
     
-    func signUp(with user: User, completion: @escaping (Error?) -> ()) {
+    func signUp(with user: User, completion: @escaping (Error?) -> (Void)) {
         let signUpUrl = baseURL.appendingPathComponent("api/auth/register")
         
         var request = URLRequest(url: signUpUrl)
@@ -86,6 +87,7 @@ class UserController {
             let decoder = JSONDecoder()
             do {
                 self.bearer = try decoder.decode(BearerToken.self, from: data)
+                self.userID = try decoder.decode(UserID.self, from: data)
             } catch {
                 print("Error decoding bearer token \(error)")
                 completion(error)
