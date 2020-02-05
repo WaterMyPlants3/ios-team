@@ -34,6 +34,8 @@ class PlantController {
         
         do {
             request.httpBody = try JSONEncoder().encode(plant.plantRepresentation)
+            let putString = String.init(data: request.httpBody!, encoding: .utf8)
+            print(putString!)
         } catch {
             NSLog("Error encoding Entry: \(error)")
             completion(error)
@@ -53,13 +55,15 @@ class PlantController {
     
     
     private func fetchPlantsFromServer(completion: @escaping (Error?) -> Void = { _ in }) {
-        
+        guard let bearer = UserController.sharedInstance.bearer else { return }
+        print(bearer)
         guard let userID = UserController.sharedInstance.userID else { return }
         
         let requestURL = databaseURL.appendingPathExtension("api/users/\(userID)/plants")
 
         var request = URLRequest(url: requestURL)
         request.httpMethod = "GET"
+        request.addValue("Bearer \(bearer.token)", forHTTPHeaderField: "Authorization")
 
         URLSession.shared.dataTask(with: request) { data, _, error in
             if let error = error {
@@ -79,7 +83,7 @@ class PlantController {
             }
             
             do {
-                let plantRepresentations = Array(try JSONDecoder().decode([String: PlantRepresentation].self, from: data).values)
+                let plantRepresentations = Array(try JSONDecoder().decode([Int: PlantRepresentation].self, from: data).values)
                 try self.updatePlant(with: plantRepresentations)
                 DispatchQueue.main.async {
                 completion(nil)
