@@ -18,7 +18,6 @@ struct PlantRepresentation: Equatable, Codable {
     var h2oFrequency: Int64
 }
 
-
 struct PlantRepresentations: Codable {
     let results: [PlantRepresentation]
 }
