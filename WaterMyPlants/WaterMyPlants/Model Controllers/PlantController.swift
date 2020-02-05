@@ -102,8 +102,8 @@ class PlantController {
         
     }
     
-    func createPlant(with name:String, species: String, h2oFrequency: Int64) {
-        guard  let plant = Plant(h2oFrequency: Int(h2oFrequency), nickname: name, context: context) else { return }
+    func createPlant(with nickname: String, species: String, h2oFrequency: Int64) {
+        guard  let plant = Plant(h2oFrequency: Int(h2oFrequency), nickname: nickname, species: species, context: context) else { return }
         put(plant: plant)
         try? CoreDataStack.shared.save(in: context)
     }
