@@ -16,10 +16,40 @@ class PlantController {
     
     var searchedPlants: [PlantRepresentation] = []
     
+     typealias CompletionHandler = (Error?) -> Void
+    
     static let sharedInstance = PlantController()
     
     private let firebaseURL = URL(string: "")!
     private let databaseURL = URL(string: "")!
+    
+    
+    
+    func put(plant: Plant, completion: @escaping CompletionHandler = { _ in }) {
+        // Told it what endpoint or URL to send it to and constructed the URL
+        let identifier = plant.identifier ?? UUID()
+        let requestURL = databaseURL.appendingPathComponent(identifier.uuidString).appendingPathExtension("json")
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = "PUT"
+        
+        do {
+            request.httpBody = try JSONEncoder().encode(plant.plantRepresentation)
+        } catch {
+            NSLog("Error encoding Entry: \(error)")
+            completion(error)
+            return
+        }
+        
+        URLSession.shared.dataTask(with: request) { data, _, error in
+            if let error = error {
+                print("Error fetching entries: \(error.localizedDescription)")
+                DispatchQueue.main.async {
+                    completion(error)
+                }
+                return
+            }
+        }.resume()
+    }
     
     
     func fetchPlantsFromServer(completion: @escaping (Error?) -> Void = { _ in }) {
