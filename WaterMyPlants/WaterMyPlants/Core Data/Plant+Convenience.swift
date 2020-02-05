@@ -53,19 +53,4 @@ let context = persistentStoreController.mainContext
         
         self.init(h2oFrequency: h2oFrequency, nickname: nickname, species: species, plantKey: Int64(plantKey), context: context)
     }
-    
-    @discardableResult convenience init?(h2oFrequency: Int, nickname: String, species: String, context: PersistentContext) {
-       
-      guard let context = context as? NSManagedObjectContext else {return nil}
-      self.init(context: context)
-      self.h2oFrequency = Int64(h2oFrequency)
-      self.nickname = nickname
-      self.species = species
-        
-        self.init(h2oFrequency: Int(h2oFrequency), nickname: nickname, species: species, context: context)
-        
-    }
-    
-   
-    
  }
