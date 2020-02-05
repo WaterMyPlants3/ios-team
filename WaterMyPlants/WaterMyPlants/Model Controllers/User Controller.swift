@@ -52,6 +52,7 @@ class UserController {
         }.resume()
     }
     
+    // Use patricktest username and patricktest password (known working login)
     func signIn(with user: User, completion: @escaping (Error?) -> ()) {
         
         let signInUrl = baseURL.appendingPathComponent("api/auth/login")
@@ -92,6 +93,7 @@ class UserController {
                 self.bearer = try decoder.decode(BearerToken.self, from: data)
                 self.userID = try decoder.decode(UserID.self, from: data)
                 print(self.userID!)
+                print(self.bearer!)
             } catch {
                 print("Error decoding bearer token \(error)")
                 completion(error)
