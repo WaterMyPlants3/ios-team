@@ -10,6 +10,17 @@ import Foundation
 import CoreData
 
 
+enum WaterFrequency: Int64 {
+    case once = 1
+    case twice = 2
+    case three = 3
+    
+    static var allCase: [WaterFrequency] {
+        return [.once, .twice, .three]
+    }
+}
+
+
  var persistentStoreController: PersistentStoreController = CoreDataStack()
 let context = persistentStoreController.mainContext
 
