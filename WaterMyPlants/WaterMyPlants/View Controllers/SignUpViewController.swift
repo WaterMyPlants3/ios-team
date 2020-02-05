@@ -12,9 +12,7 @@ import CoreData
 class SignUpViewController: UIViewController {
     
     var userController = UserController()
-    
-    //var baseURL = URL(string: "https://water-my-plant-9000.herokuapp.com/")
-    
+        
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!

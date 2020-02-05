@@ -344,6 +344,7 @@
                                 <rect key="frame" x="175" y="466" width="64" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
+                                    <action selector="signInButtonTapped:" destination="sor-dW-qlE" eventType="touchUpInside" id="KY8-rK-hRw"/>
                                     <segue destination="I5B-3x-p8H" kind="show" identifier="loginTableView" id="Eif-E5-xH8"/>
                                 </connections>
                             </button>
@@ -363,6 +364,10 @@
                         <viewLayoutGuide key="safeArea" id="SkG-Ih-gWP"/>
                     </view>
                     <navigationItem key="navigationItem" id="cZc-oG-Qp2"/>
+                    <connections>
+                        <outlet property="passWordTextField" destination="8MX-IB-MgI" id="Rye-si-wFd"/>
+                        <outlet property="userNameTextField" destination="6wS-AP-mcY" id="um3-iY-A8k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D9m-o7-BXN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

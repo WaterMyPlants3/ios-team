@@ -35,12 +35,14 @@ class AddPlantViewController: UIViewController {
         title = plant?.nickname ?? "Plant Name"
         plantNameTextField.text = plant?.nickname
         SpeciesTextField.text = plant?.species
+
         let waterFre: WaterFrequency
         if let waterFerquency = plant?.h2oFrequency {
             waterFre = WaterFrequency(rawValue: waterFerquency) ?? .once
         }
         
         
+
         
     }
     
