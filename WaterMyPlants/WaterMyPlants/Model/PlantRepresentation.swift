@@ -13,14 +13,9 @@ import UIKit
 
 struct PlantRepresentation: Equatable, Codable {
     var nickname: String
-    var imageName: String
-    var identifier: UUID?
+    var plantKey: Int64?
     var species: String?
     var h2oFrequency: Int64
-    
-    var plantImage: UIImage? {
-         UIImage(named: imageName)!
-    }
 }
 
 

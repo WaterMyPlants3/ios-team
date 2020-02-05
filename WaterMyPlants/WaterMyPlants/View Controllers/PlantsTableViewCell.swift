@@ -31,9 +31,7 @@ class PlantsTableViewCell: UITableViewCell {
             let plantRepresentation = plantRepresentation else { return }
         
         plantName.text = plant.nickname
-        speciesName.text = plant.species
-        plantImage.image = UIImage(named: plantRepresentation.imageName)
-        
+        speciesName.text = plant.species        
         
         
     }

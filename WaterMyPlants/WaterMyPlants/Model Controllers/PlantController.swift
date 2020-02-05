@@ -21,16 +21,16 @@ class PlantController {
     static let sharedInstance = PlantController()
     
     private let firebaseURL = URL(string: "")!
-    private let databaseURL = URL(string: "")!
+    private let databaseURL = URL(string: "https://water-my-plant-9000.herokuapp.com/")!
     
     
     
     func put(plant: Plant, completion: @escaping CompletionHandler = { _ in }) {
         // Told it what endpoint or URL to send it to and constructed the URL
-        let identifier = plant.identifier ?? UUID()
-        let requestURL = databaseURL.appendingPathComponent(identifier.uuidString).appendingPathExtension("json")
+        guard let userID = UserController.sharedInstance.userID else { return }
+        let requestURL = databaseURL.appendingPathComponent("api/users/\(userID)/plants")
         var request = URLRequest(url: requestURL)
-        request.httpMethod = "PUT"
+        request.httpMethod = HTTPMethod.post.rawValue
         
         do {
             request.httpBody = try JSONEncoder().encode(plant.plantRepresentation)
@@ -96,8 +96,6 @@ class PlantController {
 
     private func update(plant: Plant, with representation: PlantRepresentation) {
         plant.nickname = representation.nickname
-        plant.imageName = representation.imageName
-        plant.identifier = representation.identifier
         plant.h2oFrequency = representation.h2oFrequency
         plant.species = representation.species
         

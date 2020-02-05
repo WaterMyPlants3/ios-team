@@ -11,12 +11,12 @@ import UserNotifications
 
 class NotificationController {
     
-    @objc func setUpNotification() {
-    let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: .alert, completionHandler: <#T##(Bool, Error?) -> Void#>)
-        
-        
-    }
+//    @objc func setUpNotification() {
+//    let center = UNUserNotificationCenter.current()
+//        center.requestAuthorization(options: .alert, completionHandler: )
+//
+//
+//    }
     
     
 }
