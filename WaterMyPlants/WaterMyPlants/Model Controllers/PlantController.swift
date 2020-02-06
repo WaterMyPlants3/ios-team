@@ -33,9 +33,7 @@ class PlantController {
     }
     
      typealias CompletionHandler = (Error?) -> Void
-    
     static let sharedInstance = PlantController()
-    
     private let databaseURL = URL(string: "https://water-my-plant-9000.herokuapp.com/")!
     
     
@@ -158,7 +156,9 @@ class PlantController {
     
 
     func createPlant(with name: String, species: String, h2oFrequency: Int64) throws {
+        let context = persistentStoreController.mainContext
         guard  let plant = Plant(h2oFrequency: h2oFrequency, nickname: name, species: species, context: context) else { return }
+        
         put(plant: plant)
         do {
         try CoreDataStack.shared.save(in: context)
