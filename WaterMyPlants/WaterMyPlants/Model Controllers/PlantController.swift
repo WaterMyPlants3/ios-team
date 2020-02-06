@@ -33,7 +33,9 @@ class PlantController {
     }
     
      typealias CompletionHandler = (Error?) -> Void
+    
     static let sharedInstance = PlantController()
+    
     private let databaseURL = URL(string: "https://water-my-plant-9000.herokuapp.com/")!
     
     

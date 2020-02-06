@@ -17,9 +17,7 @@ class H2OFrequencyViewController: UIViewController {
     var plantController: PlantController?
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        plantController?.fetchPlantsFromServer()
-        
+        super.viewDidLoad()        
         NotificationCenter.default.addObserver(
         self,
         selector: #selector(dataDidUpdate),

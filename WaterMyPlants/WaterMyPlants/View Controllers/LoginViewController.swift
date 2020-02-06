@@ -28,8 +28,6 @@ class LoginViewController: UIViewController {
             userController.signIn(with: User(username: username, password: password)) { error in
                 if let error = error {
                     print("Error loggingin: \(error.localizedDescription)")
-                } else {
-                    self.performSegue(withIdentifier: segueKeys.logInToTableView, sender: self)
                 }
             }
         }
