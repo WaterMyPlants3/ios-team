@@ -15,6 +15,7 @@ class H2OFrequencyViewController: UIViewController {
     @IBOutlet weak var wateringChart: Chart!
     
     var plantController: PlantController?
+    var indexPath: IndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()        

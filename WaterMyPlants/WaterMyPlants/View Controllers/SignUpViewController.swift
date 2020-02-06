@@ -22,12 +22,10 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func SignUpButtonTapped(_ sender: UIButton) {
-        let phoneNumber = "123-456-7890"
          if let username = userNameTextField.text,
             let password = passwordTextField.text {
             userController.signUp(with: User(username: username,
-                                             password: password,
-                                             phoneNumber: phoneNumber)) { (error) in 
+                                             password: password)) { (error) in
                 if let error = error {
                     // Alert Controller in here to say "That username already exists"
                     print("Error sign up: \(error.localizedDescription)")
