@@ -44,10 +44,9 @@ class PlantTableViewDataSource: NSObject, UITableViewDataSource {
                    } catch {
                        NSLog("Error deleting entry: \(error)")
                    }
-               }
-    }
-    
-}
+                }
+            }
+        }
 
 
 // MARK: - FRC Delegate

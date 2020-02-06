@@ -113,7 +113,7 @@
                                 <rect key="frame" x="8" y="96" width="398" height="758"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iGd-Tb-JBT">
-                                        <rect key="frame" x="0.0" y="0.0" width="398" height="375"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="758"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlantCell" textLabel="yml-I6-PqS" detailTextLabel="FGG-57-VgM" style="IBUITableViewCellStyleValue1" id="8fV-xJ-k8C">
@@ -139,15 +139,13 @@
                                                         </label>
                                                     </subviews>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <segue destination="P71-Za-iIb" kind="show" identifier="h2oFrequencyShowSegue" id="jED-K1-jXa"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                         <sections/>
                                     </tableView>
-                                    <view contentMode="scaleToFill" id="MAF-vq-z7Z" customClass="Chart" customModule="SwiftChart">
-                                        <rect key="frame" x="0.0" y="383" width="398" height="375"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -169,12 +167,47 @@
                     </navigationItem>
                     <connections>
                         <outlet property="plantTableView" destination="iGd-Tb-JBT" id="nc5-66-bhc"/>
-                        <outlet property="wateringChart" destination="MAF-vq-z7Z" id="kgd-Zp-ypj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mb9-Fm-2sq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1665" y="-75"/>
+        </scene>
+        <!--Watering Frequency-->
+        <scene sceneID="FYc-Go-p7T">
+            <objects>
+                <viewController id="P71-Za-iIb" customClass="H2OFrequencyViewController" customModule="WaterMyPlants" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1M8-dn-8U8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="D8E-fU-paX">
+                                <rect key="frame" x="8" y="96" width="398" height="758"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U1W-mn-P7S" customClass="Chart" customModule="SwiftChart">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="758"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="n1y-Df-pvX" firstAttribute="trailing" secondItem="D8E-fU-paX" secondAttribute="trailing" constant="8" id="8Jw-2l-CWA"/>
+                            <constraint firstItem="n1y-Df-pvX" firstAttribute="bottom" secondItem="D8E-fU-paX" secondAttribute="bottom" constant="8" id="Fpx-ns-FVL"/>
+                            <constraint firstItem="D8E-fU-paX" firstAttribute="top" secondItem="n1y-Df-pvX" secondAttribute="top" constant="8" id="Xgb-q8-IHT"/>
+                            <constraint firstItem="D8E-fU-paX" firstAttribute="leading" secondItem="n1y-Df-pvX" secondAttribute="leading" constant="8" id="s7M-MR-LRI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="n1y-Df-pvX"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Watering Frequency" id="pn8-fI-rZ7"/>
+                    <connections>
+                        <outlet property="wateringChart" destination="U1W-mn-P7S" id="6Cf-Fc-y4G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Yk-fI-Dwv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2607" y="-79"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="HV2-2k-jLg">

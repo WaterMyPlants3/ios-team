@@ -28,6 +28,7 @@
 		DBBE6ECD23EB9255007BC212 /* PlantTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE6ECC23EB9255007BC212 /* PlantTableViewDataSource.swift */; };
 		DBBE6ECF23EB9357007BC212 /* PlantDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE6ECE23EB9357007BC212 /* PlantDisplayViewController.swift */; };
 		DBBE6ED223EB9763007BC212 /* LocalNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE6ED123EB9763007BC212 /* LocalNotifications.swift */; };
+		DBBE6ED423EC8004007BC212 /* H2OFrequencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE6ED323EC8004007BC212 /* H2OFrequencyViewController.swift */; };
 		E31F98CC23E8A58500AEBBCE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F98CB23E8A58500AEBBCE /* LoginViewController.swift */; };
 		E31F98CE23E8A59A00AEBBCE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F98CD23E8A59A00AEBBCE /* SignUpViewController.swift */; };
 		E3D5B6D023E89AD300E9E774 /* segueKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D5B6CF23E89AD300E9E774 /* segueKeys.swift */; };
@@ -59,6 +60,7 @@
 		DBBE6ECC23EB9255007BC212 /* PlantTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantTableViewDataSource.swift; sourceTree = "<group>"; };
 		DBBE6ECE23EB9357007BC212 /* PlantDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDisplayViewController.swift; sourceTree = "<group>"; };
 		DBBE6ED123EB9763007BC212 /* LocalNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotifications.swift; sourceTree = "<group>"; };
+		DBBE6ED323EC8004007BC212 /* H2OFrequencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H2OFrequencyViewController.swift; sourceTree = "<group>"; };
 		E31F98CB23E8A58500AEBBCE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E31F98CD23E8A59A00AEBBCE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E3D5B6CF23E89AD300E9E774 /* segueKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = segueKeys.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				E31F98CB23E8A58500AEBBCE /* LoginViewController.swift */,
 				E31F98CD23E8A59A00AEBBCE /* SignUpViewController.swift */,
 				DBBE6ECE23EB9357007BC212 /* PlantDisplayViewController.swift */,
+				DBBE6ED323EC8004007BC212 /* H2OFrequencyViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				DB13B3EF23E5FABE008192A3 /* PlantRepresentation.swift in Sources */,
 				E3D5B6D023E89AD300E9E774 /* segueKeys.swift in Sources */,
 				E31F98CE23E8A59A00AEBBCE /* SignUpViewController.swift in Sources */,
+				DBBE6ED423EC8004007BC212 /* H2OFrequencyViewController.swift in Sources */,
 				DB13B40123E8B349008192A3 /* NetworkErrors.swift in Sources */,
 				DBBE6ED223EB9763007BC212 /* LocalNotifications.swift in Sources */,
 				DB13B3FF23E8B30C008192A3 /* HTTPMethods.swift in Sources */,

@@ -45,10 +45,10 @@ let context = persistentStoreController.mainContext
         self.plantKey = plantKey
     }
     
-    @discardableResult convenience init?(h2oFrequency: Int, nickname: String, species: String, context: PersistentContext) {
+    @discardableResult convenience init?(h2oFrequency: Int64, nickname: String, species: String, context: PersistentContext) {
         
         self.init(context: context)
-        self.h2oFrequency = Int64(h2oFrequency)
+        self.h2oFrequency = h2oFrequency
         self.nickname = nickname
         self.species = species
     }
