@@ -15,18 +15,32 @@ class PlantController {
     // MARK: - Properties
     
     var searchedPlants: [PlantRepresentation] = []
+    var persistentStoreController: PersistentStoreController = CoreDataStack()
+    var plantCount: Int {
+        persistentStoreController.itemCount
+    }
+    var plants: [PlantRepresentation]? {
+        persistentStoreController.allItems as? [PlantRepresentation]
+    }
+    
+    var delegate: PersistentStoreControllerDelegate? {
+        get {
+            return persistentStoreController.delegate
+        }
+        set(newDelegate) {
+            persistentStoreController.delegate = newDelegate
+        }
+    }
     
      typealias CompletionHandler = (Error?) -> Void
     
     static let sharedInstance = PlantController()
     
-    private let firebaseURL = URL(string: "")!
     private let databaseURL = URL(string: "https://water-my-plant-9000.herokuapp.com/")!
     
     
     
     func put(plant: Plant, completion: @escaping CompletionHandler = { _ in }) {
-        // Told it what endpoint or URL to send it to and constructed the URL
         guard let userID = UserController.sharedInstance.userID else { return }
         let requestURL = databaseURL.appendingPathComponent("api/users/\(userID)/plants")
         var request = URLRequest(url: requestURL)
@@ -83,7 +97,7 @@ class PlantController {
             }
             
             do {
-                let plantRepresentations = Array(try JSONDecoder().decode([Int: PlantRepresentation].self, from: data).values)
+                let plantRepresentations = Array(try JSONDecoder().decode([String: PlantRepresentation].self, from: data).values)
                 try self.updatePlant(with: plantRepresentations)
                 DispatchQueue.main.async {
                 completion(nil)
@@ -142,8 +156,8 @@ class PlantController {
     }
     
 
-    func createPlant(with name: String, species: String, h2oFrequency: Int64) {
-    guard  let plant = Plant(h2oFrequency: Int(h2oFrequency), nickname: name, species: species, context: context) else { return }
+    func createPlant(with name: String, species: String, h2oFrequency: Int64) throws {
+        guard  let plant = Plant(h2oFrequency: Int(h2oFrequency), nickname: name, species: species, context: context) else { return }
         put(plant: plant)
         do {
         try CoreDataStack.shared.save(in: context)
@@ -161,6 +175,15 @@ class PlantController {
             context.reset()
             print("Error deleting plant from MOC \(error)")
         }
+    }
+    
+    func getPlant(at indexPath: IndexPath) -> Plant? {
+        return persistentStoreController.fetchItem(at: indexPath) as? Plant
+    }
+    
+    func deletePlant(at indexPath: IndexPath) throws {
+        guard let thisPlant = getPlant(at: indexPath) else { throw NSError() }
+        try persistentStoreController.delete(thisPlant, in: nil)
     }
     
     

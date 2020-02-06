@@ -34,7 +34,6 @@
                                         <connections>
                                             <action selector="SignUpButtonTapped:" destination="6kr-MK-IiY" eventType="touchUpInside" id="jPw-Mg-FOk"/>
                                             <action selector="signUpButtonTapped:" destination="Ez5-wh-7Dd" eventType="touchUpInside" id="AjJ-Tm-cCx"/>
-                                            <segue destination="I5B-3x-p8H" kind="show" identifier="SigntoTableView" id="RbJ-ep-kEz"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -102,11 +101,11 @@
             </objects>
             <point key="canvasLocation" x="655.07246376811599" y="-75"/>
         </scene>
-        <!--Plants Table View Controller-->
-        <scene sceneID="s0M-ec-zWd">
+        <!--Plants-->
+        <scene sceneID="Z2v-R6-BJI">
             <objects>
-                <tableViewController id="I5B-3x-p8H" customClass="PlantsTableViewController" customModule="WaterMyPlants" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4IF-h8-PKr">
+                <viewController id="5z8-9p-aVa" customClass="PlantDisplayViewController" customModule="WaterMyPlants" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i3e-Wd-qNM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -227,73 +226,57 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="LWa-3d-wTB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lCV-4h-Gzw"/>
+                    <navigationItem key="navigationItem" title="Plants" id="tZU-op-cVt">
+                        <barButtonItem key="rightBarButtonItem" title="Add Plant" id="7Zi-my-e0N">
+                            <connections>
+                                <action selector="addPlantButtonTapped:" destination="5z8-9p-aVa" id="214-vg-pfM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="NickNameLabel" destination="M6s-uw-KU2" id="wmV-PX-zgG"/>
                         <outlet property="nameLabel" destination="CC0-xX-AJx" id="cgP-YU-Yvh"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FD0-go-UOa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mb9-Fm-2sq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2453.6231884057975" y="273.88392857142856"/>
+            <point key="canvasLocation" x="1665" y="-75"/>
         </scene>
-        <!--Add Plant View Controller-->
-        <scene sceneID="dQE-UF-vcx">
+        <!--Watering Frequency-->
+        <scene sceneID="7bd-4b-tuV">
             <objects>
-                <viewController id="fFe-VF-dfo" customClass="AddPlantViewController" customModule="WaterMyPlants" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QMr-jm-9Rj">
+                <viewController id="SLp-2d-kLS" customClass="PlantDisplayViewController" customModule="WaterMyPlants" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gei-R8-Y1D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PlantNickName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XsC-ak-6Zn">
-                                <rect key="frame" x="45" y="225" width="324" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SpeciesName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lUJ-vI-WYR">
-                                <rect key="frame" x="45" y="267" width="324" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4fB-nm-uRW">
-                                <rect key="frame" x="55" y="317" width="304" height="32"/>
-                                <segments>
-                                    <segment title="1"/>
-                                    <segment title="2"/>
-                                    <segment title="3"/>
-                                </segments>
-                            </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nEw-3O-eV3">
+                                <rect key="frame" x="8" y="96" width="398" height="758"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7GX-Ti-wfb" customClass="Chart" customModule="SwiftChart">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="758"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="4fB-nm-uRW" firstAttribute="leading" secondItem="ZZl-lQ-Q3R" secondAttribute="leading" constant="55" id="ELd-Bj-hE0"/>
-                            <constraint firstItem="4fB-nm-uRW" firstAttribute="top" secondItem="lUJ-vI-WYR" secondAttribute="bottom" constant="16" id="M0n-kv-vd5"/>
-                            <constraint firstItem="ZZl-lQ-Q3R" firstAttribute="trailing" secondItem="lUJ-vI-WYR" secondAttribute="trailing" constant="45" id="UNA-Ir-yIn"/>
-                            <constraint firstItem="ZZl-lQ-Q3R" firstAttribute="trailing" secondItem="XsC-ak-6Zn" secondAttribute="trailing" constant="45" id="YBI-6J-3Kq"/>
-                            <constraint firstItem="XsC-ak-6Zn" firstAttribute="leading" secondItem="ZZl-lQ-Q3R" secondAttribute="leading" constant="45" id="deq-XX-K2U"/>
-                            <constraint firstItem="ZZl-lQ-Q3R" firstAttribute="trailing" secondItem="4fB-nm-uRW" secondAttribute="trailing" constant="55" id="gHJ-yr-oAd"/>
-                            <constraint firstItem="lUJ-vI-WYR" firstAttribute="leading" secondItem="ZZl-lQ-Q3R" secondAttribute="leading" constant="45" id="iop-CU-3kf"/>
-                            <constraint firstItem="lUJ-vI-WYR" firstAttribute="top" secondItem="XsC-ak-6Zn" secondAttribute="bottom" constant="8" id="jaE-8I-e3v"/>
-                            <constraint firstItem="XsC-ak-6Zn" firstAttribute="top" secondItem="ZZl-lQ-Q3R" secondAttribute="top" constant="137" id="rcc-Gp-dBM"/>
+                            <constraint firstItem="0xU-Pi-4zt" firstAttribute="bottom" secondItem="nEw-3O-eV3" secondAttribute="bottom" constant="8" id="4AQ-yz-gen"/>
+                            <constraint firstItem="0xU-Pi-4zt" firstAttribute="trailing" secondItem="nEw-3O-eV3" secondAttribute="trailing" constant="8" id="Hh7-kQ-MBN"/>
+                            <constraint firstItem="nEw-3O-eV3" firstAttribute="top" secondItem="0xU-Pi-4zt" secondAttribute="top" constant="8" id="QyY-rL-5Mm"/>
+                            <constraint firstItem="nEw-3O-eV3" firstAttribute="leading" secondItem="0xU-Pi-4zt" secondAttribute="leading" constant="8" id="teO-xj-Tex"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ZZl-lQ-Q3R"/>
+                        <viewLayoutGuide key="safeArea" id="0xU-Pi-4zt"/>
                     </view>
-                    <navigationItem key="navigationItem" id="j3f-ee-lPa">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="FPa-Gp-6CG">
-                            <connections>
-                                <action selector="SaveButtonTapped:" destination="fFe-VF-dfo" id="JIL-oJ-Ekp"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Watering Frequency" id="gzI-hb-Whl"/>
                     <connections>
-                        <outlet property="SpeciesTextField" destination="lUJ-vI-WYR" id="FdP-Jr-FNX"/>
-                        <outlet property="plantNameTextField" destination="XsC-ak-6Zn" id="SyC-ve-D69"/>
-                        <outlet property="waterFerquencySelector" destination="4fB-nm-uRW" id="dkl-Or-uVQ"/>
+                        <outlet property="wateringChart" destination="7GX-Ti-wfb" id="yz7-bW-nK3"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f1H-v7-ynU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4rQ-Vy-6SN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2450.7246376811595" y="-506.25"/>
+            <point key="canvasLocation" x="2465" y="-75"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="HV2-2k-jLg">
@@ -318,7 +301,7 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="signInButtonTapped:" destination="sor-dW-qlE" eventType="touchUpInside" id="KY8-rK-hRw"/>
-                                    <segue destination="I5B-3x-p8H" kind="show" identifier="loginTableView" id="Eif-E5-xH8"/>
+                                    <segue destination="5z8-9p-aVa" kind="show" identifier="loginTableView" id="KJi-TM-tjR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -365,10 +348,4 @@
             <point key="canvasLocation" x="-255.07246376811597" y="-75"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="plus" catalog="system" width="64" height="56"/>
-    </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="RbJ-ep-kEz"/>
-    </inferredMetricsTieBreakers>
 </document>

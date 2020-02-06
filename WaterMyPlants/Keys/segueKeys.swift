@@ -14,7 +14,7 @@ struct segueKeys {
     static let logInSegue = "LoginSegue"
     static let signToTableView = "SigntoTableView"
     static let logInToTableView = "loginTableView"
-    static let PlantDetialSegue = "PlantDetialSegue"
+    static let PlantDetialSegue = "PlantDetailSegue"
     static let AddPlantSegue = "AddPlantSegue"
 
 }

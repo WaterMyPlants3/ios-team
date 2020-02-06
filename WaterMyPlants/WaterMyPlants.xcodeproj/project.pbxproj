@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,9 +14,7 @@
 		DB13B3EB23E5FAAC008192A3 /* PersistenceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB13B3EA23E5FAAC008192A3 /* PersistenceProtocol.swift */; };
 		DB13B3ED23E5FAB2008192A3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB13B3EC23E5FAB2008192A3 /* User.swift */; };
 		DB13B3EF23E5FABE008192A3 /* PlantRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB13B3EE23E5FABE008192A3 /* PlantRepresentation.swift */; };
-		DB13B3F523E5FC28008192A3 /* PlantImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB13B3F423E5FC28008192A3 /* PlantImageController.swift */; };
 		DB13B3F723E5FC51008192A3 /* PlantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB13B3F623E5FC51008192A3 /* PlantController.swift */; };
-		DB13B3F923E5FC7A008192A3 /* PlantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB13B3F823E5FC7A008192A3 /* PlantsTableViewController.swift */; };
 		DB13B3FB23E8B212008192A3 /* User Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB13B3FA23E8B212008192A3 /* User Controller.swift */; };
 		DB13B3FD23E8B236008192A3 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB13B3FC23E8B236008192A3 /* Bearer.swift */; };
 		DB13B3FF23E8B30C008192A3 /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB13B3FE23E8B30C008192A3 /* HTTPMethods.swift */; };
@@ -27,11 +25,11 @@
 		DB1F236423E4EFE9005B7C27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1F236223E4EFE9005B7C27 /* Main.storyboard */; };
 		DB1F236623E4EFEA005B7C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB1F236523E4EFEA005B7C27 /* Assets.xcassets */; };
 		DB1F236923E4EFEA005B7C27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1F236723E4EFEA005B7C27 /* LaunchScreen.storyboard */; };
-		E31F98C823E8A12100AEBBCE /* AddPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F98C723E8A12100AEBBCE /* AddPlantViewController.swift */; };
-		E31F98CA23E8A4B400AEBBCE /* PlantsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F98C923E8A4B400AEBBCE /* PlantsTableViewCell.swift */; };
+		DBBE6ECD23EB9255007BC212 /* PlantTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE6ECC23EB9255007BC212 /* PlantTableViewDataSource.swift */; };
+		DBBE6ECF23EB9357007BC212 /* PlantDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE6ECE23EB9357007BC212 /* PlantDisplayViewController.swift */; };
+		DBBE6ED223EB9763007BC212 /* LocalNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE6ED123EB9763007BC212 /* LocalNotifications.swift */; };
 		E31F98CC23E8A58500AEBBCE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F98CB23E8A58500AEBBCE /* LoginViewController.swift */; };
 		E31F98CE23E8A59A00AEBBCE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F98CD23E8A59A00AEBBCE /* SignUpViewController.swift */; };
-		E31F98D023E8AE7600AEBBCE /* PlantsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F98CF23E8AE7600AEBBCE /* PlantsDetailViewController.swift */; };
 		E3D5B6D023E89AD300E9E774 /* segueKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D5B6CF23E89AD300E9E774 /* segueKeys.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,9 +43,7 @@
 		DB13B3EA23E5FAAC008192A3 /* PersistenceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceProtocol.swift; sourceTree = "<group>"; };
 		DB13B3EC23E5FAB2008192A3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DB13B3EE23E5FABE008192A3 /* PlantRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantRepresentation.swift; sourceTree = "<group>"; };
-		DB13B3F423E5FC28008192A3 /* PlantImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantImageController.swift; sourceTree = "<group>"; };
 		DB13B3F623E5FC51008192A3 /* PlantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantController.swift; sourceTree = "<group>"; };
-		DB13B3F823E5FC7A008192A3 /* PlantsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsTableViewController.swift; sourceTree = "<group>"; };
 		DB13B3FA23E8B212008192A3 /* User Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User Controller.swift"; sourceTree = "<group>"; };
 		DB13B3FC23E8B236008192A3 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
 		DB13B3FE23E8B30C008192A3 /* HTTPMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethods.swift; sourceTree = "<group>"; };
@@ -60,11 +56,11 @@
 		DB1F236523E4EFEA005B7C27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB1F236823E4EFEA005B7C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB1F236A23E4EFEA005B7C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E31F98C723E8A12100AEBBCE /* AddPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantViewController.swift; sourceTree = "<group>"; };
-		E31F98C923E8A4B400AEBBCE /* PlantsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsTableViewCell.swift; sourceTree = "<group>"; };
+		DBBE6ECC23EB9255007BC212 /* PlantTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantTableViewDataSource.swift; sourceTree = "<group>"; };
+		DBBE6ECE23EB9357007BC212 /* PlantDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDisplayViewController.swift; sourceTree = "<group>"; };
+		DBBE6ED123EB9763007BC212 /* LocalNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotifications.swift; sourceTree = "<group>"; };
 		E31F98CB23E8A58500AEBBCE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E31F98CD23E8A59A00AEBBCE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		E31F98CF23E8AE7600AEBBCE /* PlantsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsDetailViewController.swift; sourceTree = "<group>"; };
 		E3D5B6CF23E89AD300E9E774 /* segueKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = segueKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +96,7 @@
 		DB13B3E023E5F9EA008192A3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DBBE6ED023EB974D007BC212 /* Notifications */,
 				DB1F235C23E4EFE9005B7C27 /* AppDelegate.swift */,
 				DB1F235E23E4EFE9005B7C27 /* SceneDelegate.swift */,
 				DB1F236523E4EFEA005B7C27 /* Assets.xcassets */,
@@ -134,10 +131,10 @@
 		DB13B3F023E5FAD5008192A3 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DB13B3F423E5FC28008192A3 /* PlantImageController.swift */,
 				DB13B3F623E5FC51008192A3 /* PlantController.swift */,
 				DB13B3FA23E8B212008192A3 /* User Controller.swift */,
 				DB13B40623EA15C2008192A3 /* NotificationController.swift */,
+				DBBE6ECC23EB9255007BC212 /* PlantTableViewDataSource.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -145,12 +142,9 @@
 		DB13B3F123E5FADC008192A3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DB13B3F823E5FC7A008192A3 /* PlantsTableViewController.swift */,
-				E31F98C723E8A12100AEBBCE /* AddPlantViewController.swift */,
-				E31F98C923E8A4B400AEBBCE /* PlantsTableViewCell.swift */,
 				E31F98CB23E8A58500AEBBCE /* LoginViewController.swift */,
 				E31F98CD23E8A59A00AEBBCE /* SignUpViewController.swift */,
-				E31F98CF23E8AE7600AEBBCE /* PlantsDetailViewController.swift */,
+				DBBE6ECE23EB9357007BC212 /* PlantDisplayViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -188,6 +182,14 @@
 			path = WaterMyPlants;
 			sourceTree = "<group>";
 		};
+		DBBE6ED023EB974D007BC212 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				DBBE6ED123EB9763007BC212 /* LocalNotifications.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
 		E3D5B6CE23E89A8E00E9E774 /* Keys */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +209,7 @@
 				DB1F235523E4EFE9005B7C27 /* Sources */,
 				DB1F235623E4EFE9005B7C27 /* Frameworks */,
 				DB1F235723E4EFE9005B7C27 /* Resources */,
+				B9E9F08D5CAA6EE9CBDC3F2E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -264,6 +267,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		B9E9F08D5CAA6EE9CBDC3F2E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WaterMyPlants/Pods-WaterMyPlants-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WaterMyPlants/Pods-WaterMyPlants-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WaterMyPlants/Pods-WaterMyPlants-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F3BA1E02E13BB493F1260FD9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -293,22 +313,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E31F98C823E8A12100AEBBCE /* AddPlantViewController.swift in Sources */,
 				DB13B3FB23E8B212008192A3 /* User Controller.swift in Sources */,
 				DB13B3E623E5FA8B008192A3 /* CoreDataStack.swift in Sources */,
-				DB13B3F523E5FC28008192A3 /* PlantImageController.swift in Sources */,
-				E31F98D023E8AE7600AEBBCE /* PlantsDetailViewController.swift in Sources */,
 				DB13B3EF23E5FABE008192A3 /* PlantRepresentation.swift in Sources */,
 				E3D5B6D023E89AD300E9E774 /* segueKeys.swift in Sources */,
 				E31F98CE23E8A59A00AEBBCE /* SignUpViewController.swift in Sources */,
 				DB13B40123E8B349008192A3 /* NetworkErrors.swift in Sources */,
+				DBBE6ED223EB9763007BC212 /* LocalNotifications.swift in Sources */,
 				DB13B3FF23E8B30C008192A3 /* HTTPMethods.swift in Sources */,
 				DB13B3E423E5FA06008192A3 /* WaterMyPlants.xcdatamodeld in Sources */,
+				DBBE6ECD23EB9255007BC212 /* PlantTableViewDataSource.swift in Sources */,
 				DB13B3E823E5FA9B008192A3 /* Plant+Convenience.swift in Sources */,
-				E31F98CA23E8A4B400AEBBCE /* PlantsTableViewCell.swift in Sources */,
 				DB13B3ED23E5FAB2008192A3 /* User.swift in Sources */,
 				DB13B40723EA15C2008192A3 /* NotificationController.swift in Sources */,
-				DB13B3F923E5FC7A008192A3 /* PlantsTableViewController.swift in Sources */,
+				DBBE6ECF23EB9357007BC212 /* PlantDisplayViewController.swift in Sources */,
 				DB13B3F723E5FC51008192A3 /* PlantController.swift in Sources */,
 				E31F98CC23E8A58500AEBBCE /* LoginViewController.swift in Sources */,
 				DB13B3FD23E8B236008192A3 /* Bearer.swift in Sources */,

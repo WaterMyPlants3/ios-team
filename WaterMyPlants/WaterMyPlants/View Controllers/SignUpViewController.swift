@@ -31,7 +31,7 @@ class SignUpViewController: UIViewController {
                 if let error = error {
                     print("Error sign up: \(error.localizedDescription)")
                 } else {
-                    self.performSegue(withIdentifier: segueKeys.signToTableView, sender: self)
+                    self.navigationController?.popViewController(animated: true)
                 }
             }
         }

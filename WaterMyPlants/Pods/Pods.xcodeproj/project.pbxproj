@@ -19,13 +19,27 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		4E43D621431A57BEDBFA2D00B180D41B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		8B1CB86021C3270AAD09E34B0D5EB5F9 /* Pods-WaterMyPlants-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EDDB5E2FDAE4AECB06956AD10F500718 /* Pods-WaterMyPlants-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9CBD5145C02967DF56640029A17F2D71 /* Pods-WaterMyPlants-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2F6E544D3F4B84B0751253F673014E /* Pods-WaterMyPlants-dummy.m */; };
+		0EFE27A8EFE011B8758BD790F5ECA609 /* SwiftChart-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E673EFEF0E6ACB5272E1F843FE51CF1 /* SwiftChart-dummy.m */; };
+		22356745FC364A6705AB56B2A90B6B2C /* Pods-WaterMyPlants-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F71B79E3EF6318D50539B8221A59C8B /* Pods-WaterMyPlants-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22F45ACF5A3671A00366F1F3211AFCAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		373C85B7B6669A0A3705344EDAB91402 /* ChartColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8C4ADE4EA9F1071E67E1CC07BF3CBD /* ChartColors.swift */; };
+		9834999AED6F53771CCEB0FA4291843E /* Pods-WaterMyPlants-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DE2737BEB3888B85C633DB1F33BB8A /* Pods-WaterMyPlants-dummy.m */; };
+		9B6B025901B92784B8037B236F392AA3 /* SwiftChart-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D64DE1A9E1BC3F1BF6FEBE5D45901753 /* SwiftChart-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AABB25CD63C72262E7FFE6F57470ACE0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
+		B6613C0A904ECFDCC0150613D7AF1206 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		E89F36993229D1B75DDCC7E56FC12B62 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CCD2A8B95D340BE27495DEFCA06E2B /* Chart.swift */; };
+		F7951E078EEAB8901537CEA3C6C01859 /* ChartSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050E1593C5F9DB0BFDCF940E438B9DE0 /* ChartSeries.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CE23C28FD5C046D63D3990B1A5EEAFF0 /* PBXContainerItemProxy */ = {
+		9A0FAB93B6E883D11919630CF1D18FA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E7BD5B8067AD0B7AFB7967E30BF1BB8;
+			remoteInfo = SwiftChart;
+		};
+		F2A0C1806102B2F5B9505E5ECFD999A9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -35,144 +49,222 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		158DA9DF550D52252504DEDC55096D64 /* Pods-WaterMyPlants-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WaterMyPlants-acknowledgements.plist"; sourceTree = "<group>"; };
-		1BD4E40F9BD0AB701D286D0E86DB4382 /* Pods-WaterMyPlants-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WaterMyPlants-Info.plist"; sourceTree = "<group>"; };
-		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		51DB5671DD8612ABA67537C393877DB8 /* Pods-WaterMyPlants.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WaterMyPlants.modulemap"; sourceTree = "<group>"; };
-		64E6A160C1311B17295F03D8F5FEBE4E /* Pods-WaterMyPlants.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WaterMyPlants.release.xcconfig"; sourceTree = "<group>"; };
-		89F85ACF3D78B39506B75103B4694B36 /* SwiftLint.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.xcconfig; sourceTree = "<group>"; };
-		8C2F6E544D3F4B84B0751253F673014E /* Pods-WaterMyPlants-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WaterMyPlants-dummy.m"; sourceTree = "<group>"; };
+		0386647CB37914AEC8D0A23E3BF2B668 /* SwiftChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftChart.framework; path = SwiftChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		050E1593C5F9DB0BFDCF940E438B9DE0 /* ChartSeries.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartSeries.swift; path = Source/ChartSeries.swift; sourceTree = "<group>"; };
+		05DE2737BEB3888B85C633DB1F33BB8A /* Pods-WaterMyPlants-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WaterMyPlants-dummy.m"; sourceTree = "<group>"; };
+		1C8C4ADE4EA9F1071E67E1CC07BF3CBD /* ChartColors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartColors.swift; path = Source/ChartColors.swift; sourceTree = "<group>"; };
+		309176DAE6DB53308279CC61BB5761BE /* Pods-WaterMyPlants-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WaterMyPlants-Info.plist"; sourceTree = "<group>"; };
+		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		353C1DEB4BCD36DE8C9A79905B14F81E /* Pods-WaterMyPlants.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WaterMyPlants.debug.xcconfig"; sourceTree = "<group>"; };
+		36289834CCB672C33A47651577A5B724 /* SwiftChart-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftChart-prefix.pch"; sourceTree = "<group>"; };
+		41CCD2A8B95D340BE27495DEFCA06E2B /* Chart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Chart.swift; path = Source/Chart.swift; sourceTree = "<group>"; };
+		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4D4A6209EE6094184A7B726A3F72B48A /* Pods-WaterMyPlants-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WaterMyPlants-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4E673EFEF0E6ACB5272E1F843FE51CF1 /* SwiftChart-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftChart-dummy.m"; sourceTree = "<group>"; };
+		5728FA8B49D5F9197D547C6E7A8296E8 /* Pods-WaterMyPlants.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WaterMyPlants.release.xcconfig"; sourceTree = "<group>"; };
+		7C779B448495FF0B7C139525A48CC826 /* SwiftLint.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.xcconfig; sourceTree = "<group>"; };
+		7F71B79E3EF6318D50539B8221A59C8B /* Pods-WaterMyPlants-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WaterMyPlants-umbrella.h"; sourceTree = "<group>"; };
+		83405B5F19334884D3A56246D388AE58 /* Pods-WaterMyPlants-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WaterMyPlants-frameworks.sh"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BBF23FBABEB1E1BBCA94F7DECAAAE7C4 /* Pods-WaterMyPlants.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WaterMyPlants.debug.xcconfig"; sourceTree = "<group>"; };
-		BC86AEEF2EC62E319D435F3D813348CA /* Pods-WaterMyPlants-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WaterMyPlants-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BD42B70949C9E311231145E1D602F1EB /* SwiftChart-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftChart-Info.plist"; sourceTree = "<group>"; };
+		D4A4834BEABE7E16B27C7C9661FA9C3C /* SwiftChart.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftChart.xcconfig; sourceTree = "<group>"; };
+		D64DE1A9E1BC3F1BF6FEBE5D45901753 /* SwiftChart-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftChart-umbrella.h"; sourceTree = "<group>"; };
 		E185DBF226F6AEE7ACF5CF3038DB935E /* Pods_WaterMyPlants.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WaterMyPlants.framework; path = "Pods-WaterMyPlants.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDDB5E2FDAE4AECB06956AD10F500718 /* Pods-WaterMyPlants-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WaterMyPlants-umbrella.h"; sourceTree = "<group>"; };
+		F6F30E3CEF1A54113F163ACC07EC1586 /* Pods-WaterMyPlants.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WaterMyPlants.modulemap"; sourceTree = "<group>"; };
+		F92C9F71EF6B754107F690EC340A1F5E /* Pods-WaterMyPlants-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WaterMyPlants-acknowledgements.plist"; sourceTree = "<group>"; };
+		FAC28EE68A7B02D6B4C98607D9328753 /* SwiftChart.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftChart.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F1C95A19C208ED2A9F70B505E8ECA5DA /* Frameworks */ = {
+		7C75323E3A181BCC5B455CBD0102BF7E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E43D621431A57BEDBFA2D00B180D41B /* Foundation.framework in Frameworks */,
+				B6613C0A904ECFDCC0150613D7AF1206 /* Foundation.framework in Frameworks */,
+				AABB25CD63C72262E7FFE6F57470ACE0 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92FEFC2A587944B978CBC764CC5E45E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22F45ACF5A3671A00366F1F3211AFCAF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00DA6968DE0C0631DD20B3A70846C8A4 /* Pods-WaterMyPlants */ = {
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				51DB5671DD8612ABA67537C393877DB8 /* Pods-WaterMyPlants.modulemap */,
-				BC86AEEF2EC62E319D435F3D813348CA /* Pods-WaterMyPlants-acknowledgements.markdown */,
-				158DA9DF550D52252504DEDC55096D64 /* Pods-WaterMyPlants-acknowledgements.plist */,
-				8C2F6E544D3F4B84B0751253F673014E /* Pods-WaterMyPlants-dummy.m */,
-				1BD4E40F9BD0AB701D286D0E86DB4382 /* Pods-WaterMyPlants-Info.plist */,
-				EDDB5E2FDAE4AECB06956AD10F500718 /* Pods-WaterMyPlants-umbrella.h */,
-				BBF23FBABEB1E1BBCA94F7DECAAAE7C4 /* Pods-WaterMyPlants.debug.xcconfig */,
-				64E6A160C1311B17295F03D8F5FEBE4E /* Pods-WaterMyPlants.release.xcconfig */,
+				E2983683FD097A93297E2F5D4E382B36 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3454291DB88652B1900D6C442E261E3E /* SwiftChart */ = {
+			isa = PBXGroup;
+			children = (
+				41CCD2A8B95D340BE27495DEFCA06E2B /* Chart.swift */,
+				1C8C4ADE4EA9F1071E67E1CC07BF3CBD /* ChartColors.swift */,
+				050E1593C5F9DB0BFDCF940E438B9DE0 /* ChartSeries.swift */,
+				67C98EE3FDC5D1720607DAA8D2FE2102 /* Support Files */,
+			);
+			name = SwiftChart;
+			path = SwiftChart;
+			sourceTree = "<group>";
+		};
+		52FAD94AEE34931B07F786A891E4A0DF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				99522ADC8C1235CDC963AEF1E22A9E0E /* Pods-WaterMyPlants */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		67C98EE3FDC5D1720607DAA8D2FE2102 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAC28EE68A7B02D6B4C98607D9328753 /* SwiftChart.modulemap */,
+				D4A4834BEABE7E16B27C7C9661FA9C3C /* SwiftChart.xcconfig */,
+				4E673EFEF0E6ACB5272E1F843FE51CF1 /* SwiftChart-dummy.m */,
+				BD42B70949C9E311231145E1D602F1EB /* SwiftChart-Info.plist */,
+				36289834CCB672C33A47651577A5B724 /* SwiftChart-prefix.pch */,
+				D64DE1A9E1BC3F1BF6FEBE5D45901753 /* SwiftChart-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftChart";
+			sourceTree = "<group>";
+		};
+		71294701D60ABB481B981816FD3E06B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E185DBF226F6AEE7ACF5CF3038DB935E /* Pods_WaterMyPlants.framework */,
+				0386647CB37914AEC8D0A23E3BF2B668 /* SwiftChart.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8D8F174EF94E6C060E87AFB2EE98F145 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7C779B448495FF0B7C139525A48CC826 /* SwiftLint.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftLint";
+			sourceTree = "<group>";
+		};
+		99522ADC8C1235CDC963AEF1E22A9E0E /* Pods-WaterMyPlants */ = {
+			isa = PBXGroup;
+			children = (
+				F6F30E3CEF1A54113F163ACC07EC1586 /* Pods-WaterMyPlants.modulemap */,
+				4D4A6209EE6094184A7B726A3F72B48A /* Pods-WaterMyPlants-acknowledgements.markdown */,
+				F92C9F71EF6B754107F690EC340A1F5E /* Pods-WaterMyPlants-acknowledgements.plist */,
+				05DE2737BEB3888B85C633DB1F33BB8A /* Pods-WaterMyPlants-dummy.m */,
+				83405B5F19334884D3A56246D388AE58 /* Pods-WaterMyPlants-frameworks.sh */,
+				309176DAE6DB53308279CC61BB5761BE /* Pods-WaterMyPlants-Info.plist */,
+				7F71B79E3EF6318D50539B8221A59C8B /* Pods-WaterMyPlants-umbrella.h */,
+				353C1DEB4BCD36DE8C9A79905B14F81E /* Pods-WaterMyPlants.debug.xcconfig */,
+				5728FA8B49D5F9197D547C6E7A8296E8 /* Pods-WaterMyPlants.release.xcconfig */,
 			);
 			name = "Pods-WaterMyPlants";
 			path = "Target Support Files/Pods-WaterMyPlants";
 			sourceTree = "<group>";
 		};
-		0712EAE1152407460995937EBAA4ED44 /* Products */ = {
+		A1A1A255E377BCCC57805C90273CBF86 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E185DBF226F6AEE7ACF5CF3038DB935E /* Pods_WaterMyPlants.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		965877409E01FB3D85D85E90E6B30185 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9AED61B9A1CFA211C061344F741DBA07 /* SwiftLint */,
+				3454291DB88652B1900D6C442E261E3E /* SwiftChart */,
+				DF10E7E5317B5FFD4CA734F3DCC1BB59 /* SwiftLint */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		9AED61B9A1CFA211C061344F741DBA07 /* SwiftLint */ = {
-			isa = PBXGroup;
-			children = (
-				EEA599FE5C15138FF0981CCFB01E55AA /* Support Files */,
-			);
-			name = SwiftLint;
-			path = SwiftLint;
-			sourceTree = "<group>";
-		};
-		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				965877409E01FB3D85D85E90E6B30185 /* Pods */,
-				0712EAE1152407460995937EBAA4ED44 /* Products */,
-				D0B84F69A06385A217343A2E29498E11 /* Targets Support Files */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				A1A1A255E377BCCC57805C90273CBF86 /* Pods */,
+				71294701D60ABB481B981816FD3E06B5 /* Products */,
+				52FAD94AEE34931B07F786A891E4A0DF /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D0B84F69A06385A217343A2E29498E11 /* Targets Support Files */ = {
+		DF10E7E5317B5FFD4CA734F3DCC1BB59 /* SwiftLint */ = {
 			isa = PBXGroup;
 			children = (
-				00DA6968DE0C0631DD20B3A70846C8A4 /* Pods-WaterMyPlants */,
+				8D8F174EF94E6C060E87AFB2EE98F145 /* Support Files */,
 			);
-			name = "Targets Support Files";
+			name = SwiftLint;
+			path = SwiftLint;
 			sourceTree = "<group>";
 		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+				436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */,
+				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EEA599FE5C15138FF0981CCFB01E55AA /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				89F85ACF3D78B39506B75103B4694B36 /* SwiftLint.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftLint";
+			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		205CBD4B193ACFDCB7BEB3B20C2197C0 /* Headers */ = {
+		7486A9308C4740F09DB472C29309C4D4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B1CB86021C3270AAD09E34B0D5EB5F9 /* Pods-WaterMyPlants-umbrella.h in Headers */,
+				22356745FC364A6705AB56B2A90B6B2C /* Pods-WaterMyPlants-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91C1F06F7D5949312F39A6B7B93A9380 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B6B025901B92784B8037B236F392AA3 /* SwiftChart-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		FEE2C5D22B0ABF5BDC6FE9967F832BCB /* Pods-WaterMyPlants */ = {
+		4E7BD5B8067AD0B7AFB7967E30BF1BB8 /* SwiftChart */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7659D59E4E2BC6DC9E7A5A0F92DB6BE3 /* Build configuration list for PBXNativeTarget "Pods-WaterMyPlants" */;
+			buildConfigurationList = 01C92B5C91FB34518F35871F48660483 /* Build configuration list for PBXNativeTarget "SwiftChart" */;
 			buildPhases = (
-				205CBD4B193ACFDCB7BEB3B20C2197C0 /* Headers */,
-				E26F58897AAAEE724243FE0F5D0911FF /* Sources */,
-				F1C95A19C208ED2A9F70B505E8ECA5DA /* Frameworks */,
-				A320A4ECFFF4EAC493C402E51C51D5EB /* Resources */,
+				91C1F06F7D5949312F39A6B7B93A9380 /* Headers */,
+				67CE8E2CA5EBDB8230D41321BB9632B4 /* Sources */,
+				7C75323E3A181BCC5B455CBD0102BF7E /* Frameworks */,
+				923DC915C4C0B60AEC3A935835AA08C1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				64C1C2DFD27448CD1DB30FAD6F15E43F /* PBXTargetDependency */,
+			);
+			name = SwiftChart;
+			productName = SwiftChart;
+			productReference = 0386647CB37914AEC8D0A23E3BF2B668 /* SwiftChart.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FEE2C5D22B0ABF5BDC6FE9967F832BCB /* Pods-WaterMyPlants */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B2EAF59B65257811E313C62B4FBDEE6 /* Build configuration list for PBXNativeTarget "Pods-WaterMyPlants" */;
+			buildPhases = (
+				7486A9308C4740F09DB472C29309C4D4 /* Headers */,
+				EC5952BD7A7A2824FCE5E78263EA4BCB /* Sources */,
+				92FEFC2A587944B978CBC764CC5E45E8 /* Frameworks */,
+				FE3D7218406597B9A2AE1D44C010BA98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70F7EA475B7C96E9F01A7638D291C753 /* PBXTargetDependency */,
+				EF2C85FD007621931DE8358596415FF4 /* PBXTargetDependency */,
 			);
 			name = "Pods-WaterMyPlants";
 			productName = "Pods-WaterMyPlants";
@@ -197,18 +289,26 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 0712EAE1152407460995937EBAA4ED44 /* Products */;
+			productRefGroup = 71294701D60ABB481B981816FD3E06B5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				FEE2C5D22B0ABF5BDC6FE9967F832BCB /* Pods-WaterMyPlants */,
+				4E7BD5B8067AD0B7AFB7967E30BF1BB8 /* SwiftChart */,
 				52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A320A4ECFFF4EAC493C402E51C51D5EB /* Resources */ = {
+		923DC915C4C0B60AEC3A935835AA08C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE3D7218406597B9A2AE1D44C010BA98 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -218,26 +318,153 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E26F58897AAAEE724243FE0F5D0911FF /* Sources */ = {
+		67CE8E2CA5EBDB8230D41321BB9632B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CBD5145C02967DF56640029A17F2D71 /* Pods-WaterMyPlants-dummy.m in Sources */,
+				E89F36993229D1B75DDCC7E56FC12B62 /* Chart.swift in Sources */,
+				373C85B7B6669A0A3705344EDAB91402 /* ChartColors.swift in Sources */,
+				F7951E078EEAB8901537CEA3C6C01859 /* ChartSeries.swift in Sources */,
+				0EFE27A8EFE011B8758BD790F5ECA609 /* SwiftChart-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC5952BD7A7A2824FCE5E78263EA4BCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9834999AED6F53771CCEB0FA4291843E /* Pods-WaterMyPlants-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		64C1C2DFD27448CD1DB30FAD6F15E43F /* PBXTargetDependency */ = {
+		70F7EA475B7C96E9F01A7638D291C753 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftChart;
+			target = 4E7BD5B8067AD0B7AFB7967E30BF1BB8 /* SwiftChart */;
+			targetProxy = 9A0FAB93B6E883D11919630CF1D18FA0 /* PBXContainerItemProxy */;
+		};
+		EF2C85FD007621931DE8358596415FF4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftLint;
 			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
-			targetProxy = CE23C28FD5C046D63D3990B1A5EEAFF0 /* PBXContainerItemProxy */;
+			targetProxy = F2A0C1806102B2F5B9505E5ECFD999A9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		393A7D6ACE3E33685194D23A99FA79B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4A4834BEABE7E16B27C7C9661FA9C3C /* SwiftChart.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftChart/SwiftChart-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftChart/SwiftChart-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftChart/SwiftChart.modulemap";
+				PRODUCT_MODULE_NAME = SwiftChart;
+				PRODUCT_NAME = SwiftChart;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3F8D2115E6F90BB37B3DCF4421A2AEEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4A4834BEABE7E16B27C7C9661FA9C3C /* SwiftChart.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftChart/SwiftChart-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftChart/SwiftChart-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftChart/SwiftChart.modulemap";
+				PRODUCT_MODULE_NAME = SwiftChart;
+				PRODUCT_NAME = SwiftChart;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		50F06EE700C0DCDA4F782ABF7ADF04D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5728FA8B49D5F9197D547C6E7A8296E8 /* Pods-WaterMyPlants.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WaterMyPlants/Pods-WaterMyPlants-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WaterMyPlants/Pods-WaterMyPlants.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		510B057D2E9F059C50D52DA5D90F3ACF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -297,83 +524,6 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
-		};
-		5AE3C78AFB46803689D2A011F0A68F9F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 64E6A160C1311B17295F03D8F5FEBE4E /* Pods-WaterMyPlants.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-WaterMyPlants/Pods-WaterMyPlants-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-WaterMyPlants/Pods-WaterMyPlants.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		60F9853C904EF7385BFB5AEADD07D890 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BBF23FBABEB1E1BBCA94F7DECAAAE7C4 /* Pods-WaterMyPlants.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-WaterMyPlants/Pods-WaterMyPlants-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-WaterMyPlants/Pods-WaterMyPlants.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		804E13245C9FBBE6A340C555CA8B2B4C /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -441,7 +591,7 @@
 		};
 		84D7C4574E8F0F3095623F0E06F5B402 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89F85ACF3D78B39506B75103B4694B36 /* SwiftLint.xcconfig */;
+			baseConfigurationReference = 7C779B448495FF0B7C139525A48CC826 /* SwiftLint.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -456,9 +606,47 @@
 			};
 			name = Release;
 		};
+		C1ECEB16E0509F2920FC4D86D1341DED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 353C1DEB4BCD36DE8C9A79905B14F81E /* Pods-WaterMyPlants.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WaterMyPlants/Pods-WaterMyPlants-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WaterMyPlants/Pods-WaterMyPlants.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		DEED47E09AF743F48544C1C4FEADEF47 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89F85ACF3D78B39506B75103B4694B36 /* SwiftLint.xcconfig */;
+			baseConfigurationReference = 7C779B448495FF0B7C139525A48CC826 /* SwiftLint.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -475,20 +663,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		01C92B5C91FB34518F35871F48660483 /* Build configuration list for PBXNativeTarget "SwiftChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				393A7D6ACE3E33685194D23A99FA79B0 /* Debug */,
+				3F8D2115E6F90BB37B3DCF4421A2AEEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B2EAF59B65257811E313C62B4FBDEE6 /* Build configuration list for PBXNativeTarget "Pods-WaterMyPlants" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1ECEB16E0509F2920FC4D86D1341DED /* Debug */,
+				50F06EE700C0DCDA4F782ABF7ADF04D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				804E13245C9FBBE6A340C555CA8B2B4C /* Debug */,
 				510B057D2E9F059C50D52DA5D90F3ACF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7659D59E4E2BC6DC9E7A5A0F92DB6BE3 /* Build configuration list for PBXNativeTarget "Pods-WaterMyPlants" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				60F9853C904EF7385BFB5AEADD07D890 /* Debug */,
-				5AE3C78AFB46803689D2A011F0A68F9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
