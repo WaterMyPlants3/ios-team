@@ -10,9 +10,8 @@ import UIKit
 import SwiftChart
 
 class PlantDisplayViewController: UIViewController {
-    //
+    
     @IBOutlet private weak var plantTableView: UITableView!
-    @IBOutlet private weak var wateringChart: Chart!
         
         private var plantController = PlantController()
         private var tableDataSource = PlantTableViewDataSource()
@@ -30,14 +29,7 @@ class PlantDisplayViewController: UIViewController {
             plantController.delegate = tableDataSource
             plantController.fetchPlantsFromServer()
             
-            dataDidUpdate()
             plantTableView.reloadData()
-            
-            NotificationCenter.default.addObserver(
-                self,
-                selector: #selector(dataDidUpdate),
-                name: .dataDidUpdate,
-                object: nil)
         }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -75,25 +67,11 @@ class PlantDisplayViewController: UIViewController {
                         else { return }
                     do {
                         try self.plantController.createPlant(with: nickname, species: species, h2oFrequency: h2o)
-                        NotificationCenter.default.post(name: .dataDidUpdate, object: nil)
                     } catch {
                         NSLog("Error saving entry to persistent store: \(error)")
                     }
             }))
             present(alert, animated: true, completion: nil)
-        }
-        
-@objc func dataDidUpdate() {
-            wateringChart.removeAllSeries()
-            
-            var data = [Double]()
-            
-            if let plants = plantController.plants {
-                data = plants.map { Double($0.h2oFrequency) }.reversed()
-            }
-            wateringChart.add(ChartSeries(data))
-            wateringChart.series[0].area = true
-            plantTableView.reloadData()
         }
     }
 
@@ -102,5 +80,9 @@ class PlantDisplayViewController: UIViewController {
     extension PlantDisplayViewController: UITableViewDelegate {
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             tableView.deselectRow(at: indexPath, animated: true)
+        }
+        
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            //Send the plantController to the H2OFrequencyViewController... The identifier is "h2oFrequencyShowSegue"
         }
     }
