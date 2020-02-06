@@ -16,6 +16,7 @@ class PlantDisplayViewController: UIViewController {
     var localIndexPath: IndexPath?
         private var plantController = PlantController()
         private var tableDataSource = PlantTableViewDataSource()
+        var localIndexPath: IndexPath?
         
         // MARK: - Methods
         override func viewDidLoad() {
@@ -79,7 +80,6 @@ class PlantDisplayViewController: UIViewController {
             tableView.deselectRow(at: indexPath, animated: true)
             let indexPath = indexPath
             localIndexPath = indexPath
-            
         }
         
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
