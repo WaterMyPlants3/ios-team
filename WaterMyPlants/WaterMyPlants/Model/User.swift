@@ -11,7 +11,6 @@ import Foundation
 struct User: Codable, Hashable {
     var username: String
     var password: String
-    var phoneNumber: String?
 }
 
 struct UserID: Codable, Hashable {

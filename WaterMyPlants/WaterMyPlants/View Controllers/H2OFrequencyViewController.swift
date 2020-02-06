@@ -15,6 +15,8 @@ class H2OFrequencyViewController: UIViewController {
     @IBOutlet weak var wateringChart: Chart!
     
     var plantController: PlantController?
+    var indexPath: IndexPath?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()        
@@ -41,5 +43,15 @@ class H2OFrequencyViewController: UIViewController {
         }
         wateringChart.add(ChartSeries(data))
         wateringChart.series[0].area = true
+    }
+    
+    @IBAction func addWaterTapped(_ sender: Any) throws {
+        guard let indexPath = indexPath else { return }
+       try plantController?.h2oAdded(at: indexPath)
+    }
+    
+    @IBAction func noWaterTapped(_ sender: Any) throws {
+        guard let indexPath = indexPath else { return }
+       try plantController?.h2oAdded(at: indexPath)
     }
 }
