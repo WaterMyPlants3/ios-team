@@ -20,10 +20,6 @@ enum WaterFrequency: Int64 {
     }
 }
 
-
- var persistentStoreController: PersistentStoreController = CoreDataStack()
-let context = persistentStoreController.mainContext
-
  extension Plant: Persistable, PersistentStoreControllerDelegate {
     
     var plantRepresentation: PlantRepresentation? {
