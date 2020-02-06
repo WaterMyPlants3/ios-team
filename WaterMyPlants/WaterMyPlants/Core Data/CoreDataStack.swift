@@ -44,9 +44,9 @@ class CoreDataStack: NSObject, PersistentStoreController {
     }
 
     func setUpResultsController() -> NSFetchedResultsController<Plant> {
-        guard let moc = mainContext as? NSManagedObjectContext else {
-            fatalError("Main Context error")
-        }
+        
+        let moc = mainContext
+        
         let fetchRequest: NSFetchRequest<Plant> = Plant.fetchRequest()
         fetchRequest.sortDescriptors = [
             NSSortDescriptor(key: "h2oFrequency", ascending: false)]
@@ -104,7 +104,7 @@ class CoreDataStack: NSObject, PersistentStoreController {
     }
 
     func fetchContext(_ context: PersistentContext?) -> NSManagedObjectContext {
-        if let context = context as? NSManagedObjectContext {
+        if let context = context {
             return context
         } else {
             return rootContext
