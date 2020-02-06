@@ -36,7 +36,6 @@ let context = persistentStoreController.mainContext
     // Need initalizers to handle representation and local inits
     @discardableResult convenience init?(h2oFrequency: Int64?, nickname: String, species: String, plantKey: Int64?, context: PersistentContext) {
         
-        guard let context = context as? NSManagedObjectContext else { return nil }
         guard let h2oFrequency = h2oFrequency,
               let plantKey = plantKey else { return nil }
         self.init(context: context)
@@ -48,7 +47,6 @@ let context = persistentStoreController.mainContext
     
     @discardableResult convenience init?(h2oFrequency: Int, nickname: String, species: String, context: PersistentContext) {
         
-        guard let context = context as? NSManagedObjectContext else {return nil}
         self.init(context: context)
         self.h2oFrequency = Int64(h2oFrequency)
         self.nickname = nickname

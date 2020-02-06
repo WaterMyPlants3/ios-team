@@ -29,6 +29,7 @@ class SignUpViewController: UIViewController {
                                              password: password,
                                              phoneNumber: phoneNumber)) { (error) in 
                 if let error = error {
+                    // Alert Controller in here to say "That username already exists"
                     print("Error sign up: \(error.localizedDescription)")
                 } else {
                     self.navigationController?.popViewController(animated: true)
