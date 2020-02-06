@@ -28,6 +28,7 @@ class PlantDisplayViewController: UIViewController {
             tableDataSource.plantController = plantController
             
             plantController.delegate = tableDataSource
+            plantController.fetchPlantsFromServer()
             
             dataDidUpdate()
             plantTableView.reloadData()
@@ -38,6 +39,11 @@ class PlantDisplayViewController: UIViewController {
                 name: .dataDidUpdate,
                 object: nil)
         }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        plantController.fetchPlantsFromServer()
+        plantTableView.reloadData()
+    }
         
         @IBAction func addPlantButtonTapped(_ sender: UIBarButtonItem) {
             let alert = UIAlertController(

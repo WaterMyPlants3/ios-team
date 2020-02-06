@@ -68,7 +68,7 @@ class PlantController {
     }
     
     
-    private func fetchPlantsFromServer(completion: @escaping (Error?) -> Void = { _ in }) {
+    func fetchPlantsFromServer(completion: @escaping (Error?) -> Void = { _ in }) {
         guard let bearer = UserController.sharedInstance.bearer else { return }
         print(bearer)
         guard let userID = UserController.sharedInstance.userID else { return }
@@ -78,6 +78,7 @@ class PlantController {
         var request = URLRequest(url: requestURL)
         request.httpMethod = "GET"
         request.addValue("Bearer \(bearer.token)", forHTTPHeaderField: "Authorization")
+        
 
         URLSession.shared.dataTask(with: request) { data, _, error in
             if let error = error {
