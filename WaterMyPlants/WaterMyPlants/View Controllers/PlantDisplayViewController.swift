@@ -79,6 +79,10 @@ class PlantDisplayViewController: UIViewController {
         }
         
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            //Send the plantController to the H2OFrequencyViewController... The identifier is "h2oFrequencyShowSegue"
+            if segue.identifier == "h2oFrequencyShowSegue" {
+                if let h2oVC = segue.destination as? H2OFrequencyViewController {
+                    h2oVC.delegate
+                }
+            }
         }
     }
