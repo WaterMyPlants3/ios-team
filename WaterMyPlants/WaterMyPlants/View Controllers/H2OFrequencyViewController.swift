@@ -16,8 +16,7 @@ class H2OFrequencyViewController: UIViewController {
     
     var plantController: PlantController?
     var indexPath: IndexPath?
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()        
         NotificationCenter.default.addObserver(

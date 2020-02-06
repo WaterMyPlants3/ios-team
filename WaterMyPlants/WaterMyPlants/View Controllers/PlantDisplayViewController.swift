@@ -13,6 +13,7 @@ class PlantDisplayViewController: UIViewController {
 
     @IBOutlet private weak var plantTableView: UITableView!
         
+    var localIndexPath: IndexPath?
         private var plantController = PlantController()
         private var tableDataSource = PlantTableViewDataSource()
         var localIndexPath: IndexPath?
@@ -82,11 +83,13 @@ class PlantDisplayViewController: UIViewController {
         }
         
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "h2oFrequencyShowSegue" {
-                if let h2oVC = segue.destination as? H2OFrequencyViewController {
-                    h2oVC.plantController = plantController
-                    h2oVC.indexPath = localIndexPath
-                }
+            switch segue.identifier {
+            case "h2oFrequencyShowSegue":
+                guard let h2oVC = segue.destination as? H2OFrequencyViewController else { return }
+                h2oVC.plantController = plantController
+                h2oVC.indexPath = localIndexPath 
+            default:
+                break
             }
         }
     }

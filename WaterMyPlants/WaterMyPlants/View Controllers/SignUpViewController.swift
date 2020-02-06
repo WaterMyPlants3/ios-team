@@ -25,8 +25,7 @@ class SignUpViewController: UIViewController {
          if let username = userNameTextField.text,
             let password = passwordTextField.text {
             userController.signUp(with: User(username: username,
-                                             password: password
-                                             )) { (error) in
+                                             password: password)) { (error) in
                 if let error = error {
                     // Alert Controller in here to say "That username already exists"
                     print("Error sign up: \(error.localizedDescription)")
