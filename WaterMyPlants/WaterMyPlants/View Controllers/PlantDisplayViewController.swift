@@ -62,11 +62,13 @@ class PlantDisplayViewController: UIViewController {
                 title: "Add record",
                 style: .default,
                 handler: { [unowned alert] _ in
-                    guard let h2oText = alert.textFields?[0].text,
+                    guard let h2oText = alert.textFields?[2].text,
                         let nickname = alert.textFields?[0].text,
-                        let species = alert.textFields?[0].text,
+                        let species = alert.textFields?[1].text,
                         let h2o = Int64(h2oText)
                         else { return }
+//                    let h2o: Int64 = 2
+//                    let species = "mushRoom"
                     do {
                         try self.plantController.createPlant(with: nickname, species: species, h2oFrequency: h2o)
                         NotificationCenter.default.post(name: .dataDidUpdate, object: nil)
