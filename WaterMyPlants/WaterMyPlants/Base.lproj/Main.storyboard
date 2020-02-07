@@ -70,35 +70,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rR1-1n-Wo5">
-                                <rect key="frame" x="75" y="402" width="264" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.1440657383" blue="0.050700343529999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Signup">
-                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="6kr-MK-IiY" kind="show" identifier="SignupSegue" id="Qc5-LS-ztX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPj-Df-mkM">
-                                <rect key="frame" x="75" y="460" width="264" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.1440657383" blue="0.050700343529999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="sor-dW-qlE" kind="show" identifier="LoginSegue" id="ySE-Rz-fOJ"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8ib-Ah-XKg">
+                                <rect key="frame" x="8" y="164" width="398" height="596"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water My Plants" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J26-4f-hQ0">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="claudio-schwarz-purzlbaum-R9cccobu7q4-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="tIX-iy-Dr2">
+                                        <rect key="frame" x="0.0" y="78" width="398.00000000000182" height="398"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="tIX-iy-Dr2" secondAttribute="height" multiplier="1:1" id="FmS-A9-1dE"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPj-Df-mkM">
+                                        <rect key="frame" x="0.0" y="506" width="398" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.1440657383" blue="0.050700343529999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="sor-dW-qlE" kind="show" identifier="LoginSegue" id="ySE-Rz-fOJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rR1-1n-Wo5">
+                                        <rect key="frame" x="0.0" y="566" width="398" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.1440657383" blue="0.050700343529999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Signup">
+                                            <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="6kr-MK-IiY" kind="show" identifier="SignupSegue" id="Qc5-LS-ztX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.41705796632124348" blue="0.14677314958673257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="OaS-eY-G49" firstAttribute="trailing" secondItem="tPj-Df-mkM" secondAttribute="trailing" constant="75" id="AqZ-Fe-2v9"/>
-                            <constraint firstItem="rR1-1n-Wo5" firstAttribute="leading" secondItem="OaS-eY-G49" secondAttribute="leading" constant="75" id="Bya-8O-zbW"/>
-                            <constraint firstItem="tPj-Df-mkM" firstAttribute="leading" secondItem="OaS-eY-G49" secondAttribute="leading" constant="75" id="MQJ-cd-V6B"/>
-                            <constraint firstItem="rR1-1n-Wo5" firstAttribute="top" secondItem="OaS-eY-G49" secondAttribute="top" constant="314" id="PGu-Sj-5Wb"/>
-                            <constraint firstItem="OaS-eY-G49" firstAttribute="trailing" secondItem="rR1-1n-Wo5" secondAttribute="trailing" constant="75" id="gUs-QK-w8F"/>
-                            <constraint firstItem="tPj-Df-mkM" firstAttribute="top" secondItem="rR1-1n-Wo5" secondAttribute="bottom" constant="28" id="qpm-CH-TTY"/>
+                            <constraint firstItem="OaS-eY-G49" firstAttribute="trailing" secondItem="8ib-Ah-XKg" secondAttribute="trailing" constant="8" id="PuR-hf-3J6"/>
+                            <constraint firstItem="OaS-eY-G49" firstAttribute="bottom" secondItem="8ib-Ah-XKg" secondAttribute="bottom" constant="102" id="ZNw-Y8-gg6"/>
+                            <constraint firstItem="8ib-Ah-XKg" firstAttribute="leading" secondItem="OaS-eY-G49" secondAttribute="leading" constant="8" id="bEw-c3-yT1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OaS-eY-G49"/>
                     </view>
@@ -121,7 +135,9 @@
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iGd-Tb-JBT">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="758"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="separatorColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="sectionIndexBackgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NewPlantCell" rowHeight="60" id="8fV-xJ-k8C" customClass="PlantsTableViewCell" customModule="WaterMyPlants" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="398" height="60"/>
@@ -204,7 +220,6 @@
         <!--Watering Frequency-->
         <scene sceneID="FYc-Go-p7T">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Yk-fI-Dwv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="P71-Za-iIb" customClass="H2OFrequencyViewController" customModule="WaterMyPlants" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1M8-dn-8U8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -254,6 +269,7 @@
                         <outlet property="wateringChart" destination="U1W-mn-P7S" id="6Cf-Fc-y4G"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Yk-fI-Dwv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2607" y="-79"/>
         </scene>
@@ -330,4 +346,7 @@
             <point key="canvasLocation" x="-255.07246376811597" y="-75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="claudio-schwarz-purzlbaum-R9cccobu7q4-unsplash" width="7436" height="4960"/>
+    </resources>
 </document>
