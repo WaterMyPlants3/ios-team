@@ -116,31 +116,51 @@
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="758"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlantCell" textLabel="yml-I6-PqS" detailTextLabel="FGG-57-VgM" style="IBUITableViewCellStyleValue1" id="8fV-xJ-k8C">
-                                                <rect key="frame" x="0.0" y="28" width="398" height="43.5"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NewPlantCell" rowHeight="60" id="8fV-xJ-k8C" customClass="PlantsTableViewCell" customModule="WaterMyPlants" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="398" height="60"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8fV-xJ-k8C" id="sHm-Pt-aoj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yml-I6-PqS">
-                                                            <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FGG-57-VgM">
-                                                            <rect key="frame" x="334" y="12" width="44" height="20.5"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="BsI-uj-EnO">
+                                                            <rect key="frame" x="8" y="8" width="42" height="44"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4L-nN-Qw6">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="21.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9V-qi-ICf">
+                                                                    <rect key="frame" x="0.0" y="23.5" width="42" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tme-Kh-dGZ">
+                                                            <rect key="frame" x="344" y="19" width="42" height="22"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="Tme-Kh-dGZ" firstAttribute="top" secondItem="sHm-Pt-aoj" secondAttribute="topMargin" constant="8" id="5G1-86-3nM"/>
+                                                        <constraint firstItem="Tme-Kh-dGZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BsI-uj-EnO" secondAttribute="trailing" constant="8" id="CWO-lD-azZ"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="Tme-Kh-dGZ" secondAttribute="bottom" constant="8" id="DqL-wz-t4q"/>
+                                                        <constraint firstItem="BsI-uj-EnO" firstAttribute="top" secondItem="sHm-Pt-aoj" secondAttribute="top" constant="8" id="bQd-8X-N4L"/>
+                                                        <constraint firstAttribute="bottom" secondItem="BsI-uj-EnO" secondAttribute="bottom" constant="8" id="cYC-8q-9gX"/>
+                                                        <constraint firstItem="BsI-uj-EnO" firstAttribute="leading" secondItem="sHm-Pt-aoj" secondAttribute="leading" constant="8" id="gdm-eC-JNj"/>
+                                                        <constraint firstItem="Tme-Kh-dGZ" firstAttribute="trailing" secondItem="sHm-Pt-aoj" secondAttribute="trailingMargin" constant="8" id="im3-p6-JMb"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <segue destination="P71-Za-iIb" kind="show" identifier="h2oFrequencyShowSegue" id="jED-K1-jXa"/>
+                                                    <outlet property="h2oLabel" destination="Tme-Kh-dGZ" id="7GW-OU-iRi"/>
+                                                    <outlet property="nickNameLabel" destination="C4L-nN-Qw6" id="RR2-7c-b6t"/>
+                                                    <outlet property="speciesLabel" destination="H9V-qi-ICf" id="R8B-hB-Xeb"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -176,27 +196,48 @@
         <!--Watering Frequency-->
         <scene sceneID="FYc-Go-p7T">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Yk-fI-Dwv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="P71-Za-iIb" customClass="H2OFrequencyViewController" customModule="WaterMyPlants" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1M8-dn-8U8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="D8E-fU-paX">
-                                <rect key="frame" x="8" y="96" width="398" height="758"/>
+                                <rect key="frame" x="8" y="52" width="398" height="760"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U1W-mn-P7S" customClass="Chart" customModule="SwiftChart">
-                                        <rect key="frame" x="0.0" y="0.0" width="398" height="758"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="760"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </view>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="211" translatesAutoresizingMaskIntoConstraints="NO" id="B86-AC-p2m">
+                                <rect key="frame" x="20" y="820" width="374" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLq-zo-RR9">
+                                        <rect key="frame" x="0.0" y="0.0" width="98" height="30"/>
+                                        <state key="normal" title="Water Added"/>
+                                        <connections>
+                                            <action selector="addWaterTapped:" destination="P71-Za-iIb" eventType="touchUpInside" id="n4l-wJ-vCb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4H-A1-jbi">
+                                        <rect key="frame" x="309" y="0.0" width="65" height="30"/>
+                                        <state key="normal" title="No Water"/>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="n1y-Df-pvX" firstAttribute="trailing" secondItem="D8E-fU-paX" secondAttribute="trailing" constant="8" id="8Jw-2l-CWA"/>
-                            <constraint firstItem="n1y-Df-pvX" firstAttribute="bottom" secondItem="D8E-fU-paX" secondAttribute="bottom" constant="8" id="Fpx-ns-FVL"/>
+                            <constraint firstItem="n1y-Df-pvX" firstAttribute="bottom" secondItem="D8E-fU-paX" secondAttribute="bottom" constant="50" id="Fpx-ns-FVL"/>
+                            <constraint firstItem="B86-AC-p2m" firstAttribute="top" secondItem="D8E-fU-paX" secondAttribute="bottom" constant="8" id="WSC-Cy-gqc"/>
                             <constraint firstItem="D8E-fU-paX" firstAttribute="top" secondItem="n1y-Df-pvX" secondAttribute="top" constant="8" id="Xgb-q8-IHT"/>
+                            <constraint firstItem="n1y-Df-pvX" firstAttribute="trailing" secondItem="B86-AC-p2m" secondAttribute="trailing" constant="20" id="cm9-FX-G8d"/>
                             <constraint firstItem="D8E-fU-paX" firstAttribute="leading" secondItem="n1y-Df-pvX" secondAttribute="leading" constant="8" id="s7M-MR-LRI"/>
+                            <constraint firstItem="n1y-Df-pvX" firstAttribute="bottom" secondItem="B86-AC-p2m" secondAttribute="bottom" constant="12" id="xit-gQ-5XF"/>
+                            <constraint firstItem="B86-AC-p2m" firstAttribute="leading" secondItem="n1y-Df-pvX" secondAttribute="leading" constant="20" id="yJm-Oy-NdM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="n1y-Df-pvX"/>
                     </view>
@@ -205,7 +246,6 @@
                         <outlet property="wateringChart" destination="U1W-mn-P7S" id="6Cf-Fc-y4G"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Yk-fI-Dwv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2607" y="-79"/>
         </scene>

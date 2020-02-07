@@ -13,10 +13,11 @@ class PlantDisplayViewController: UIViewController {
 
     @IBOutlet private weak var plantTableView: UITableView!
         
-    var localIndexPath: IndexPath?
-        private var plantController = PlantController()
-        private var tableDataSource = PlantTableViewDataSource()
         var localIndexPath: IndexPath?
+        var plantController = PlantController()
+        private var tableDataSource = PlantTableViewDataSource()
+    var localPlant: Plant?
+       
         
         // MARK: - Methods
         override func viewDidLoad() {
@@ -78,18 +79,24 @@ class PlantDisplayViewController: UIViewController {
     extension PlantDisplayViewController: UITableViewDelegate {
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             tableView.deselectRow(at: indexPath, animated: true)
+         let plant = plantController.getPlant(at: indexPath)
+            localPlant = plant
             let indexPath = indexPath
             localIndexPath = indexPath
         }
         
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            switch segue.identifier {
-            case "h2oFrequencyShowSegue":
-                guard let h2oVC = segue.destination as? H2OFrequencyViewController else { return }
-                h2oVC.plantController = plantController
-                h2oVC.indexPath = localIndexPath 
-            default:
-                break
-            }
-        }
+//        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//            switch segue.identifier {
+//            case "h2oFrequencyShowSegue":
+//                guard let h2oVC = segue.destination as? H2OFrequencyViewController else { return }
+//                h2oVC.plantController = plantController
+//                h2oVC.indexPath = localIndexPath
+//                h2oVC.plant = localPlant
+//            default:
+//                break
+//            }
+//        }
+        
+        
+       
     }

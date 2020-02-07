@@ -30,6 +30,7 @@
 		DBBE6ED423EC8004007BC212 /* H2OFrequencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE6ED323EC8004007BC212 /* H2OFrequencyViewController.swift */; };
 		E31F98CC23E8A58500AEBBCE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F98CB23E8A58500AEBBCE /* LoginViewController.swift */; };
 		E31F98CE23E8A59A00AEBBCE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F98CD23E8A59A00AEBBCE /* SignUpViewController.swift */; };
+		E3767ABD23ECE469009E4E08 /* PlantsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3767ABC23ECE469009E4E08 /* PlantsTableViewCell.swift */; };
 		E3D5B6D023E89AD300E9E774 /* segueKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D5B6CF23E89AD300E9E774 /* segueKeys.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		DBBE6ED323EC8004007BC212 /* H2OFrequencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H2OFrequencyViewController.swift; sourceTree = "<group>"; };
 		E31F98CB23E8A58500AEBBCE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E31F98CD23E8A59A00AEBBCE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		E3767ABC23ECE469009E4E08 /* PlantsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsTableViewCell.swift; sourceTree = "<group>"; };
 		E3D5B6CF23E89AD300E9E774 /* segueKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = segueKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +147,7 @@
 				E31F98CD23E8A59A00AEBBCE /* SignUpViewController.swift */,
 				DBBE6ECE23EB9357007BC212 /* PlantDisplayViewController.swift */,
 				DBBE6ED323EC8004007BC212 /* H2OFrequencyViewController.swift */,
+				E3767ABC23ECE469009E4E08 /* PlantsTableViewCell.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				DBBE6ECF23EB9357007BC212 /* PlantDisplayViewController.swift in Sources */,
 				DB13B3F723E5FC51008192A3 /* PlantController.swift in Sources */,
 				E31F98CC23E8A58500AEBBCE /* LoginViewController.swift in Sources */,
+				E3767ABD23ECE469009E4E08 /* PlantsTableViewCell.swift in Sources */,
 				DB13B3FD23E8B236008192A3 /* Bearer.swift in Sources */,
 				DB13B3EB23E5FAAC008192A3 /* PersistenceProtocol.swift in Sources */,
 				DB1F235D23E4EFE9005B7C27 /* AppDelegate.swift in Sources */,

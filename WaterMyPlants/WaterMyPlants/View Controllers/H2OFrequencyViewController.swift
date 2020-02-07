@@ -6,51 +6,65 @@
 //  Copyright © 2020 WaterMyPlants3. All rights reserved.
 //
 
-import UIKit
-import SwiftChart
-
-class H2OFrequencyViewController: UIViewController {
-
-    
-    @IBOutlet weak var wateringChart: Chart!
-    
-    var plantController: PlantController?
-    var indexPath: IndexPath?
-
-    override func viewDidLoad() {
-        super.viewDidLoad()        
-        NotificationCenter.default.addObserver(
-        self,
-        selector: #selector(dataDidUpdate),
-        name: .dataDidUpdate,
-        object: nil)
-    }
-    
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        NotificationCenter.default.post(name: .dataDidUpdate, object: nil)
-    }
-
-    @objc func dataDidUpdate() {
-        wateringChart.removeAllSeries()
-        
-        var data = [Double]()
-        
-        if let plants = plantController?.plants {
-            data = plants.map { Double($0.h2oFrequency) }.reversed()
-        }
-        wateringChart.add(ChartSeries(data))
-        wateringChart.series[0].area = true
-    }
-    
-    @IBAction func addWaterTapped(_ sender: Any) throws {
-        guard let indexPath = indexPath else { return }
-       try plantController?.h2oAdded(at: indexPath)
-    }
-    
-    @IBAction func noWaterTapped(_ sender: Any) throws {
-        guard let indexPath = indexPath else { return }
-       try plantController?.h2oAdded(at: indexPath)
-    }
-}
+//import UIKit
+//import SwiftChart
+//
+//class H2OFrequencyViewController: UIViewController {
+//
+//    @IBOutlet weak var wateringChart: Chart?
+//
+//    var plantController: PlantController?
+//    var indexPath: IndexPath?
+//    var plant: Plant? {
+//        didSet {
+//            dataDidUpdate()
+//        }
+//    }
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+////        NotificationCenter.default.addObserver(
+////        self,
+////        selector: #selector(dataDidUpdate),
+////        name: .dataDidUpdate,
+////        object: nil)
+//    }
+//
+//
+//    override func viewDidAppear(_ animated: Bool) {
+////        super.viewDidAppear(animated)
+////        NotificationCenter.default.post(name: .dataDidUpdate, object: nil)
+//    }
+//
+//    @objc func dataDidUpdate() {
+//        wateringChart?.removeAllSeries()
+//
+//        var data = [Double]()
+//
+//        if let plants = plantController?.plants {
+//            data = plants.map { Double($0.h2oFrequency) }.reversed()
+//        }
+//        wateringChart?.add(ChartSeries(data))
+//        wateringChart?.series[0].area = true
+//    }
+//
+////    @IBAction func addWaterTapped(_ sender: UIButton) throws {
+////
+////        guard let plant = plant else { return }
+////        try plantController?.h2oAdded(plant: plant )
+////    }
+//
+////    @IBAction func noWaterTapped(_ sender: UIButton) throws {
+////        guard let plant = plant else { return }
+////        try plantController?.h2oAdded(plant: plant)
+////    }
+//
+//
+//    @IBAction func addWaterTapped(_ sender: UIButton) throws {
+//         guard let plant = plant else { return }
+//                try plantController?.h2oAdded(plant: plant )
+//    }
+//
+//
+//
+//}
