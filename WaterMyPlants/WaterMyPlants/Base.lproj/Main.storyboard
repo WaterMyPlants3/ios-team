@@ -30,7 +30,10 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pt5-u2-ZzU">
                                         <rect key="frame" x="0.0" y="84" width="254" height="30"/>
-                                        <state key="normal" title="Signup"/>
+                                        <color key="backgroundColor" red="0.0" green="0.1440657383" blue="0.050700343529999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Signup">
+                                            <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="SignUpButtonTapped:" destination="6kr-MK-IiY" eventType="touchUpInside" id="jPw-Mg-FOk"/>
                                             <action selector="signUpButtonTapped:" destination="Ez5-wh-7Dd" eventType="touchUpInside" id="AjJ-Tm-cCx"/>
@@ -39,7 +42,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.41705796630000003" blue="0.14677314960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="KTy-bX-ngh" firstAttribute="leading" secondItem="xtL-iT-HEF" secondAttribute="leading" constant="80" id="JL8-pW-AhT"/>
                             <constraint firstItem="KTy-bX-ngh" firstAttribute="centerX" secondItem="0Sp-Pm-BJr" secondAttribute="centerX" id="RhA-Gm-qtA"/>
@@ -69,22 +72,26 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rR1-1n-Wo5">
                                 <rect key="frame" x="75" y="402" width="264" height="30"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Signup"/>
+                                <color key="backgroundColor" red="0.0" green="0.1440657383" blue="0.050700343529999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Signup">
+                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="6kr-MK-IiY" kind="show" identifier="SignupSegue" id="Qc5-LS-ztX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPj-Df-mkM">
                                 <rect key="frame" x="75" y="460" width="264" height="30"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Login"/>
+                                <color key="backgroundColor" red="0.0" green="0.1440657383" blue="0.050700343529999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="sor-dW-qlE" kind="show" identifier="LoginSegue" id="ySE-Rz-fOJ"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.41705796632124348" blue="0.14677314958673257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="OaS-eY-G49" firstAttribute="trailing" secondItem="tPj-Df-mkM" secondAttribute="trailing" constant="75" id="AqZ-Fe-2v9"/>
                             <constraint firstItem="rR1-1n-Wo5" firstAttribute="leading" secondItem="OaS-eY-G49" secondAttribute="leading" constant="75" id="Bya-8O-zbW"/>
@@ -157,6 +164,7 @@
                                                         <constraint firstItem="Tme-Kh-dGZ" firstAttribute="trailing" secondItem="sHm-Pt-aoj" secondAttribute="trailingMargin" constant="8" id="im3-p6-JMb"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <color key="backgroundColor" red="0.0" green="0.41705796630000003" blue="0.14677314960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <outlet property="h2oLabel" destination="Tme-Kh-dGZ" id="7GW-OU-iRi"/>
                                                     <outlet property="nickNameLabel" destination="C4L-nN-Qw6" id="RR2-7c-b6t"/>
@@ -169,7 +177,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.41705796630000003" blue="0.14677314960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4bi-aa-t5s" firstAttribute="bottom" secondItem="ze6-Pi-cJA" secondAttribute="bottom" constant="8" id="OUK-Jb-ZhA"/>
                             <constraint firstItem="4bi-aa-t5s" firstAttribute="trailing" secondItem="ze6-Pi-cJA" secondAttribute="trailing" constant="8" id="jpA-MS-zH2"/>
@@ -269,14 +277,17 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTL-Bw-KGU">
                                 <rect key="frame" x="175" y="466" width="64" height="30"/>
-                                <state key="normal" title="Login"/>
+                                <color key="backgroundColor" red="0.0" green="0.1440657383" blue="0.050700343529999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="signInButtonTapped:" destination="sor-dW-qlE" eventType="touchUpInside" id="KY8-rK-hRw"/>
                                     <segue destination="5z8-9p-aVa" kind="show" identifier="loginTableView" id="KJi-TM-tjR"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.41705796630000003" blue="0.14677314960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6wS-AP-mcY" firstAttribute="leading" secondItem="SkG-Ih-gWP" secondAttribute="leading" constant="65" id="6Me-NR-JrN"/>
                             <constraint firstItem="6wS-AP-mcY" firstAttribute="top" secondItem="SkG-Ih-gWP" secondAttribute="top" constant="270" id="M76-by-tpQ"/>
