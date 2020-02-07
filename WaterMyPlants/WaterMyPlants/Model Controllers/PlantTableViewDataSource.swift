@@ -23,16 +23,10 @@ class PlantTableViewDataSource: NSObject, UITableViewDataSource {
        }
        
        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(
-            withIdentifier: "PlantCell",
-            for: indexPath)
-        guard let plant = plantController?.getPlant(at: indexPath)
-            else { return cell }
-        
-        cell.textLabel?.text = plant.nickname
-        cell.detailTextLabel?.text = plant.species
-        
-        return cell
+       guard let cell = tableView.dequeueReusableCell(withIdentifier: "NewPlantCell", for: indexPath) as? PlantsTableViewCell else { return UITableViewCell() }
+                cell.plant = plantController.getPlant(at: indexPath)
+                
+                return cell 
        }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

@@ -189,17 +189,15 @@ class PlantController {
         try persistentStoreController.delete(thisPlant, in: nil)
     }
     
-    func h2oAdded(at indexPath: IndexPath) throws {
+    func h2oAdded(plant: Plant) throws {
         let context = persistentStoreController.mainContext
-        guard let thisPlant = getPlant(at: indexPath) else { throw NSError() }
-        thisPlant.h2oFrequency += 1
+        plant.h2oFrequency += 1
         try persistentStoreController.save(in: context)
     }
     
-    func h2oNotAdded(at indexPath: IndexPath) throws {
+    func h2oNotAdded(plant: Plant) throws {
         let context = persistentStoreController.mainContext
-        guard let thisPlant = getPlant(at: indexPath) else { throw NSError() }
-        thisPlant.h2oFrequency -= 1
+        plant.h2oFrequency -= 1
         try persistentStoreController.save(in: context)
     }
     
