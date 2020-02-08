@@ -80,7 +80,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="claudio-schwarz-purzlbaum-R9cccobu7q4-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="tIX-iy-Dr2">
-                                        <rect key="frame" x="0.0" y="78" width="398.00000000000182" height="398"/>
+                                        <rect key="frame" x="0.0" y="78" width="398" height="398"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="tIX-iy-Dr2" secondAttribute="height" multiplier="1:1" id="FmS-A9-1dE"/>
                                         </constraints>
